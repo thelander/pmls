@@ -1,0 +1,29 @@
+relation(A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17,A18,A19,REGION_CENTROID_COL):-	
+	numeric(A1),
+	numeric(A2),
+	numeric(A3),
+	numeric(A4),
+	numeric(A5),
+	numeric(A6),
+	numeric(A7),
+	numeric(A8),
+	numeric(A9),
+	numeric(A10),
+	numeric(A11),
+	numeric(A12),
+	numeric(A13),
+	numeric(A14),
+	numeric(A15),
+	numeric(A16),
+	numeric(A17),
+	numeric(A18),
+	numeric(A19), 
+	class(REGION_CENTROID_COL).
+
+class(Class):- Class = brickface.
+class(Class):- Class = cement.
+class(Class):- Class = foliage.
+class(Class):- Class = grass.
+class(Class):- Class = path.
+class(Class):- Class = sky.
+class(Class):- Class = window.

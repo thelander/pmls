@@ -1,0 +1,14 @@
+glass(A1,A2,A3,A4,A5,A6,A7,A8,A9,Class):-
+	numeric(A1),
+	numeric(A2),
+	numeric(A3),
+	numeric(A4),
+	numeric(A5),
+	numeric(A6),
+	numeric(A7),
+	numeric(A8),
+	numeric(A9),
+	class(Class).
+
+class(C):- C = pos.
+class(C):- C = neg.

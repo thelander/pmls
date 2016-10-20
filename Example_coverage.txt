@@ -1,0 +1,26 @@
+Classifying with bit size: 4
+Example with id: 1 and head: relation(12.08,1.13,2.51,24,78,2,1.58,0.4,1.4,2.2,1.31,2.72,630,2) get class dist: [9-2,7-1,2-3]
+These rules fired: [1-3,1-4,2-2,3-2,3-3,4-1,4-2,4-4,6-1,6-2,6-3,7-1,7-2,7-4,8-1,8-2,9-1,9-2]
+Classifying with bit size: 8
+Example with id: 1 and head: relation(12.08,1.13,2.51,24,78,2,1.58,0.4,1.4,2.2,1.31,2.72,630,2) get class dist: [10-2,3-1,0-3]
+These rules fired: [1-4,2-2,4-2,4-4,5-4,6-1,6-2,7-1,7-2,7-4,8-1,8-2,9-2]
+Classifying with bit size: 16
+Example with id: 1 and head: relation(12.08,1.13,2.51,24,78,2,1.58,0.4,1.4,2.2,1.31,2.72,630,2) get class dist: [13-2,0-3,0-1]
+These rules fired: [1-1,1-4,2-2,4-2,4-4,5-1,5-4,6-2,7-2,7-4,8-2,9-2,10-1]
+Classifying with bit size: 32
+Example with id: 1 and head: relation(12.08,1.13,2.51,24,78,2,1.58,0.4,1.4,2.2,1.31,2.72,630,2) get class dist: [14-2,0-3,0-1]
+These rules fired: [1-1,1-4,2-2,3-1,4-2,4-4,5-1,5-4,6-2,7-2,7-4,8-2,9-2,10-1]
+Classifying with bit size: 64
+Example with id: 1 and head: relation(12.08,1.13,2.51,24,78,2,1.58,0.4,1.4,2.2,1.31,2.72,630,2) get class dist: [14-2,0-3,0-1]
+These rules fired: [1-1,1-4,2-2,3-1,4-2,4-4,5-1,5-4,6-2,7-2,7-4,8-2,9-2,10-1]
+Classifying with bit size: 128
+Example with id: 1 and head: relation(12.08,1.13,2.51,24,78,2,1.58,0.4,1.4,2.2,1.31,2.72,630,2) get class dist: [14-2,0-3,0-1]
+These rules fired: [1-1,1-4,2-2,3-1,4-2,4-4,5-1,5-4,6-2,7-2,7-4,8-2,9-2,10-1]
+Classifying with bit size: 256
+Example with id: 1 and head: relation(12.08,1.13,2.51,24,78,2,1.58,0.4,1.4,2.2,1.31,2.72,630,2) get class dist: [14-2,0-3,0-1]
+These rules fired: [1-1,1-4,2-2,3-1,4-2,4-4,5-1,5-4,6-2,7-2,7-4,8-2,9-2,10-1]
+-----------
+Classifying Ex id: 1
+Class become is: 2-[14-2,0-1,0-3]
+These rules fired: [1-1,1-4,2-2,3-1,4-2,4-4,5-1,5-4,6-2,7-2,7-4,8-2,9-2,10-1]
+write

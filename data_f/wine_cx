@@ -1,0 +1,22 @@
+relation(A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13, Class):-
+	numeric(A1),
+	numeric(A2),
+	numeric(A3),
+	numeric(A4),
+	numeric(A5),
+	numeric(A6),
+	numeric(A7),
+	numeric(A8),
+	numeric(A9),
+	numeric(A10),
+	numeric(A11),
+	numeric(A12),
+	numeric(A13),
+	class(Class).
+
+numeric(A):-
+	number(A).
+
+class(Class):- Class = 1.
+class(Class):- Class = 2.
+class(Class):- Class = 3.

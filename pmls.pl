@@ -54,8 +54,8 @@ method([single_model([error_est(sq_err)], linear_regression)]). %,
 %new file meta information and new data input, csv
 %also altered old prolog format...
 %all csv create a tuple of Name(Xinput, Yval/Class)
-data([set(hubble, csv, [filename('regression_data/hubble.csv'), convert(true), functor(hubble), y_cols([3]), x_cols([4])])
-       %set(breast_cancer_wisconsin, prolog, [background_head(relation/10),   background_file('classification_data/breast_cancer_wisconsin_cx'), example_file('classification_data/breast_cancer_wisconsin_ex_mod')]),
+data([%set(hubble, csv, [filename('regression_data/hubble.csv'), convert(true), functor(hubble), y_cols([3]), x_cols([4])])
+       set(breast_cancer_wisconsin, prolog, [background_head(relation/10),   background_file('classification_data/breast_cancer_wisconsin_cx'), example_file('classification_data/breast_cancer_wisconsin_ex_mod')])
        %set(bupa,                    prolog, [background_head(bupa/7),        background_file('classification_data/bupa'),                       example_file('classification_data/bupa_ex')]),
        %set(cleveland_heart_disease, prolog, [background_head(relation/14),   background_file('classification_data/cleveland_heart_disease_cx'), example_file('classification_data/cleveland_heart_disease_ex_mod')]),   
        %set(glass,                   prolog, [background_head(glass/10),      background_file('classification_data/glass'),                      example_file('classification_data/glass_ex')]),

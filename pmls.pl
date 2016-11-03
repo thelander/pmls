@@ -29,9 +29,6 @@
 %    NewT is T + 1,
 %    assert(rule_no(NewT)).
 
-setup:-
-    working_directory(L,L).
-
 experiment([validation_size(0.0), fold_x_v(10)]).
 
 method([single_model([error_est(sq_err)], linear_regression)]). %,
@@ -1271,26 +1268,3 @@ get_atomC([Code|RestOfCodes], [], RestOfCodes):-
   char_code(',', Code).
 get_atomC([Code|Codes], [Code|AtomCodes], RestOfCodes):-
   get_atomC(Codes, AtomCodes, RestOfCodes).
-
-
-
-:- setup.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -36,12 +36,13 @@ experiment([validation_size(0.0), fold_x_v(10)]).
 
 method([ ensemble_model(1000, [classification, bagging, list_classification, index([bit_size([4,8,16,32,64,128,256])]), rnd_feature(no), min_cov(0), min_margin(0.90)], sac)]).
 
-data([ %set(breast_cancer_wisconsin, relation(_,_,_,_,_,_,_,_,_,_), breast_cancer_wisconsin_cx, breast_cancer_wisconsin_ex_mod),
-       %set(bupa, bupa(_,_,_,_,_,_,_), bupa, bupa_ex),                                                                                
-       %set(cleveland_heart_disease, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_), cleveland_heart_disease_cx, cleveland_heart_disease_ex_mod),   
-       %set(glass, glass(_,_,_,_,_,_,_,_,_,_), glass, glass_ex)                                                                        
-       %set(haberman, haberman(_,_,_,_), haberman, haberman_data)
-       set(iris, iris(_,_,_,_,_), iris, iris_data)
+% Uncomment the data sets to use, and remove the trailing comma after the last one
+data([ set(breast_cancer_wisconsin, relation(_,_,_,_,_,_,_,_,_,_), breast_cancer_wisconsin_cx, breast_cancer_wisconsin_ex_mod)
+       %set(bupa, bupa(_,_,_,_,_,_,_), bupa, bupa_ex),
+       %set(cleveland_heart_disease, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_), cleveland_heart_disease_cx, cleveland_heart_disease_ex_mod)
+       %set(glass, glass(_,_,_,_,_,_,_,_,_,_), glass, glass_ex),
+       %set(haberman, haberman(_,_,_,_), haberman, haberman_data),
+       %set(iris, iris(_,_,_,_,_), iris, iris_data),
        %set(thyroid, thyroid(_,_,_,_,_,_), new_thyroid, new_thyroid_ex),
        %set(wine, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_), wine_cx, wine_ex),
        %set(image_segmentation, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_), image_segmentation_cx, image_segmentation_ex),
@@ -49,7 +50,7 @@ data([ %set(breast_cancer_wisconsin, relation(_,_,_,_,_,_,_,_,_,_), breast_cance
        %set(pendigitis, rel(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_), pendigits_names, pendigits_ex),
        %set(pima_indians, diabetes(_,_,_,_,_,_,_,_,_), pima_indians, pima_indians_ex),
        %set(sonar, mine(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_), sonar, sonar_ex),
-       %set(spectf, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_), spectf_cx, spectf_ex),       
+       %set(spectf, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_), spectf_cx, spectf_ex)
     ]).
 
 start:-	

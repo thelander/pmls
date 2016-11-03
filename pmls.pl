@@ -12,14 +12,6 @@
 %tree, util, model_based_sampling, rnd_uniform, munge, indexing]).
 :- use_module([library(csv), library(lists), library(random), library(codesio), write_results,
 	       tree, rule_set, util, model_based_sampling, rnd_uniform, munge, indexing]).
-/*
-	       'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/tree.pl',
-	       'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/util.pl',
-	       'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/model_based_sampling.pl',
-	       'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/rnd_uniform.pl',
-	       'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/munge.pl',
-               'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/indexing.pl']).
-*/
 
 %%increase memory
 :- set_prolog_stack(global, limit(9 000 000 000 000 000 000)).
@@ -38,10 +30,7 @@
 %    assert(rule_no(NewT)).
 
 setup:-
-    %current_directory(_,'C:/Users/tony/Box Sync/jobb/dsv/programmering/Indexing/data').              %SICStus prolog
     working_directory(L,L).
-    %working_directory(L,'/Users/jimmy/Documents/src/pmls/data_f').   %SU
-    %working_directory(L,'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/data').   %SCANIA
 
 experiment([validation_size(0.0), fold_x_v(10)]).
 

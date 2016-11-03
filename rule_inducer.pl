@@ -31,7 +31,6 @@ setup:-
     working_directory(L, L),
     string_concat(L, 'data_f/', PWD),
     working_directory(L, PWD).
-    %working_directory(L,'C:/jobb/programmering/indexing_code/data_f/').   
 
 threading(pool):-
   current_prolog_flag(cpu_count, CpuCount),
@@ -44,11 +43,12 @@ experiment([validation_size(0.0), fold_x_v(10)]).
 
 method([ ensemble_model(1000, [classification, bagging, list_classification, index([bit_size([4,8,16,32,64,128,256])]), rnd_feature(no), min_cov(0), min_margin(0.90)], sac)]).
 
+% Uncomment the data sets to use, and remove the trailing comma after the last one
 data([ %set(breast_cancer_wisconsin, relation(_,_,_,_,_,_,_,_,_,_), breast_cancer_wisconsin_cx, breast_cancer_wisconsin_ex_mod),
-       %set(bupa, bupa(_,_,_,_,_,_,_), bupa, bupa_ex),                                                                                
-       %set(cleveland_heart_disease, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_), cleveland_heart_disease_cx, cleveland_heart_disease_ex_mod),   
-       %set(glass, glass(_,_,_,_,_,_,_,_,_,_), glass, glass_ex)                                                                        
-       %set(haberman, haberman(_,_,_,_), haberman, haberman_data)
+       %set(bupa, bupa(_,_,_,_,_,_,_), bupa, bupa_ex),
+       %set(cleveland_heart_disease, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_), cleveland_heart_disease_cx, cleveland_heart_disease_ex_mod),
+       %set(glass, glass(_,_,_,_,_,_,_,_,_,_), glass, glass_ex),
+       %set(haberman, haberman(_,_,_,_), haberman, haberman_data),
        set(iris, iris(_,_,_,_,_), iris, iris_data)
        %set(thyroid, thyroid(_,_,_,_,_,_), new_thyroid, new_thyroid_ex),
        %set(wine, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_), wine_cx, wine_ex),
@@ -57,7 +57,7 @@ data([ %set(breast_cancer_wisconsin, relation(_,_,_,_,_,_,_,_,_,_), breast_cance
        %set(pendigitis, rel(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_), pendigits_names, pendigits_ex),
        %set(pima_indians, diabetes(_,_,_,_,_,_,_,_,_), pima_indians, pima_indians_ex),
        %set(sonar, mine(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_), sonar, sonar_ex),
-       %set(spectf, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_), spectf_cx, spectf_ex),       
+       %set(spectf, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_), spectf_cx, spectf_ex)
     ]).
 
 start:-
@@ -87,7 +87,7 @@ use_methods([Method|Methods], Folds, Name, Head, Parameters, ExLists, BKList):-
     write('Starting induction'),nl,
     do_experiment(Folds, Name, Head, Method, ExLists, BKList, Results),
     write('Writing results'),nl,
-    open('Result', append, Stream),
+    open('../results.txt', append, Stream),
     write_results(Results, Stream, Folds),
     close(Stream),
     retract_loop(Results, Head, BKList),!,

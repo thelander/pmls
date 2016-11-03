@@ -39,7 +39,7 @@ method([ ensemble_model(1000, [classification, bagging, list_classification, ind
 % Uncomment the data sets to use, and remove the trailing comma after the last one
 data([ set(breast_cancer_wisconsin, relation(_,_,_,_,_,_,_,_,_,_), breast_cancer_wisconsin_cx, breast_cancer_wisconsin_ex_mod)
        %set(bupa, bupa(_,_,_,_,_,_,_), bupa, bupa_ex),
-       %set(cleveland_heart_disease, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_), cleveland_heart_disease_cx, cleveland_heart_disease_ex_mod)
+       %set(cleveland_heart_disease, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_), cleveland_heart_disease_cx, cleveland_heart_disease_ex_mod),
        %set(glass, glass(_,_,_,_,_,_,_,_,_,_), glass, glass_ex),
        %set(haberman, haberman(_,_,_,_), haberman, haberman_data),
        %set(iris, iris(_,_,_,_,_), iris, iris_data),

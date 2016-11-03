@@ -31,7 +31,6 @@ setup:-
     working_directory(L, L),
     string_concat(L, 'data_f/', PWD),
     working_directory(L, PWD).
-    %working_directory(L,'C:/jobb/programmering/indexing_code/data_f/').   
 
 experiment([validation_size(0.0), fold_x_v(10)]).
 

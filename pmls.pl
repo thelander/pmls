@@ -96,7 +96,7 @@ process_data([set(Name, csv, CsvParameters)|Sets], Parameters, Methods):-
     member(filename(FileName), CsvParameters),
     %use internal csv library..
     %read_csv_file_to_list(FileName, Name, CsvParameters, ExList),
-    trace,
+    %trace,
     csv_read_file(FileName, [First|ExList], CsvParameters),     %Firs hold meta info about data-set  	    
     random_permutation(ExList, RndExL),	                        %re-order examples
     member(fold_x_v(Folds), Parameters),

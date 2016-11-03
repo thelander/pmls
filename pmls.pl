@@ -39,8 +39,8 @@
 
 setup:-
     %current_directory(_,'C:/Users/tony/Box Sync/jobb/dsv/programmering/Indexing/data').              %SICStus prolog
-    working_directory(L,L),
-    working_directory(L,'C:/jobb/programmering/PMLS/data').   %SU
+    working_directory(L,L).
+    %working_directory(L,'/Users/jimmy/Documents/src/pmls/data_f').   %SU
     %working_directory(L,'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/data').   %SCANIA
 
 experiment([validation_size(0.0), fold_x_v(10)]).

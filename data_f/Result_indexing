@@ -1,0 +1,1564 @@
+================================
+Data set: breast_cancer_wisconsin
+Method: ensemble_sac_list_classification
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8682
+Number of conditions: 10686.9
+Accuracy: 0.9585121602288984
+Time to classify test set: 17066
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8682
+Number of conditions: 0
+Accuracy: 0.9513590844062947
+Time to classify test set: 9703
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8682
+Number of conditions: 0
+Accuracy: 0.9642346208869814
+Time to classify test set: 10363
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8682
+Number of conditions: 0
+Accuracy: 0.9599427753934192
+Time to classify test set: 10313
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8682
+Number of conditions: 0
+Accuracy: 0.9585121602288984
+Time to classify test set: 10328
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8682
+Number of conditions: 0
+Accuracy: 0.9585121602288984
+Time to classify test set: 10486
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8682
+Number of conditions: 0
+Accuracy: 0.9585121602288984
+Time to classify test set: 11029
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: index_rules-256
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8682
+Number of conditions: 0
+Accuracy: 0.9341917024320457
+Time to classify test set: 11684
+
+
+
+================================
+Data set: bupa
+Method: ensemble_sac_list_classification
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 22127.5
+Number of conditions: 59770.8
+Accuracy: 0.7333333333333333
+Time to classify test set: 17175
+
+
+
+================================
+Data set: bupa
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 22127.5
+Number of conditions: 0
+Accuracy: 0.5826086956521739
+Time to classify test set: 10764
+
+
+
+================================
+Data set: bupa
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 22127.5
+Number of conditions: 0
+Accuracy: 0.6782608695652174
+Time to classify test set: 9065
+
+
+
+================================
+Data set: bupa
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 22127.5
+Number of conditions: 0
+Accuracy: 0.6521739130434783
+Time to classify test set: 9936
+
+
+
+================================
+Data set: bupa
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 22127.5
+Number of conditions: 0
+Accuracy: 0.6869565217391305
+Time to classify test set: 9625
+
+
+
+================================
+Data set: bupa
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 22127.5
+Number of conditions: 0
+Accuracy: 0.7304347826086957
+Time to classify test set: 9688
+
+
+
+================================
+Data set: bupa
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 22127.5
+Number of conditions: 0
+Accuracy: 0.7478260869565218
+Time to classify test set: 9922
+
+
+
+================================
+Data set: bupa
+Method: index_rules-256
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 22127.5
+Number of conditions: 0
+Accuracy: 0.7246376811594203
+Time to classify test set: 10547
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: ensemble_sac_list_classification
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29868.1
+Number of conditions: 83939.4
+Accuracy: 0.5633333333333334
+Time to classify test set: 23431
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29868.1
+Number of conditions: 0
+Accuracy: 0.5733333333333334
+Time to classify test set: 11560
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29868.1
+Number of conditions: 0
+Accuracy: 0.5266666666666666
+Time to classify test set: 12388
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29868.1
+Number of conditions: 0
+Accuracy: 0.5333333333333333
+Time to classify test set: 12356
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29868.1
+Number of conditions: 0
+Accuracy: 0.53
+Time to classify test set: 12604
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29868.1
+Number of conditions: 0
+Accuracy: 0.5866666666666667
+Time to classify test set: 11653
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29868.1
+Number of conditions: 0
+Accuracy: 0.5933333333333334
+Time to classify test set: 12448
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: index_rules-256
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29868.1
+Number of conditions: 0
+Accuracy: 0.5966666666666667
+Time to classify test set: 13868
+
+
+
+================================
+Data set: glass
+Method: ensemble_sac_list_classification
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4464.5
+Number of conditions: 3578.3
+Accuracy: 0.9272727272727272
+Time to classify test set: 1701
+
+
+
+================================
+Data set: glass
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4464.5
+Number of conditions: 0
+Accuracy: 0.9363636363636364
+Time to classify test set: 906
+
+
+
+================================
+Data set: glass
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4464.5
+Number of conditions: 0
+Accuracy: 0.9181818181818182
+Time to classify test set: 1043
+
+
+
+================================
+Data set: glass
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4464.5
+Number of conditions: 0
+Accuracy: 0.9272727272727272
+Time to classify test set: 1017
+
+
+
+================================
+Data set: glass
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4464.5
+Number of conditions: 0
+Accuracy: 0.9181818181818182
+Time to classify test set: 1043
+
+
+
+================================
+Data set: glass
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4464.5
+Number of conditions: 0
+Accuracy: 0.9181818181818182
+Time to classify test set: 1091
+
+
+
+================================
+Data set: glass
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4464.5
+Number of conditions: 0
+Accuracy: 0.9181818181818182
+Time to classify test set: 1186
+
+
+
+================================
+Data set: glass
+Method: index_rules-256
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4464.5
+Number of conditions: 0
+Accuracy: 0.9272727272727272
+Time to classify test set: 1293
+
+
+
+================================
+Data set: haberman
+Method: ensemble_sac_list_classification
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29564.3
+Number of conditions: 75417.4
+Accuracy: 0.6928104575163399
+Time to classify test set: 18284
+
+
+
+================================
+Data set: haberman
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29564.3
+Number of conditions: 0
+Accuracy: 0.7287581699346405
+Time to classify test set: 10653
+
+
+
+================================
+Data set: haberman
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29564.3
+Number of conditions: 0
+Accuracy: 0.7254901960784313
+Time to classify test set: 10093
+
+
+
+================================
+Data set: haberman
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29564.3
+Number of conditions: 0
+Accuracy: 0.7222222222222222
+Time to classify test set: 9782
+
+
+
+================================
+Data set: haberman
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29564.3
+Number of conditions: 0
+Accuracy: 0.7222222222222222
+Time to classify test set: 10966
+
+
+
+================================
+Data set: haberman
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29564.3
+Number of conditions: 0
+Accuracy: 0.6862745098039216
+Time to classify test set: 10734
+
+
+
+================================
+Data set: haberman
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29564.3
+Number of conditions: 0
+Accuracy: 0.6862745098039216
+Time to classify test set: 10813
+
+
+
+================================
+Data set: haberman
+Method: index_rules-256
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29564.3
+Number of conditions: 0
+Accuracy: 0.6830065359477124
+Time to classify test set: 11029
+
+
+
+================================
+Data set: iris
+Method: ensemble_sac_list_classification
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4497.5
+Number of conditions: 4374.1
+Accuracy: 0.9333333333333333
+Time to classify test set: 2417
+
+
+
+================================
+Data set: iris
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4497.5
+Number of conditions: 0
+Accuracy: 0.5533333333333333
+Time to classify test set: 1374
+
+
+
+================================
+Data set: iris
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4497.5
+Number of conditions: 0
+Accuracy: 0.8933333333333333
+Time to classify test set: 1374
+
+
+
+================================
+Data set: iris
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4497.5
+Number of conditions: 0
+Accuracy: 0.9133333333333333
+Time to classify test set: 1467
+
+
+
+================================
+Data set: iris
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4497.5
+Number of conditions: 0
+Accuracy: 0.9333333333333333
+Time to classify test set: 1483
+
+
+
+================================
+Data set: iris
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4497.5
+Number of conditions: 0
+Accuracy: 0.94
+Time to classify test set: 1543
+
+
+
+================================
+Data set: iris
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4497.5
+Number of conditions: 0
+Accuracy: 0.9266666666666666
+Time to classify test set: 1576
+
+
+
+================================
+Data set: iris
+Method: index_rules-256
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4497.5
+Number of conditions: 0
+Accuracy: 0.9266666666666666
+Time to classify test set: 1622
+
+
+
+================================
+Data set: thyroid
+Method: ensemble_sac_list_classification
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5634
+Number of conditions: 6593.3
+Accuracy: 0.9441860465116279
+Time to classify test set: 4414
+
+
+
+================================
+Data set: thyroid
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5634
+Number of conditions: 0
+Accuracy: 0.7023255813953488
+Time to classify test set: 2731
+
+
+
+================================
+Data set: thyroid
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5634
+Number of conditions: 0
+Accuracy: 0.7674418604651163
+Time to classify test set: 2574
+
+
+
+================================
+Data set: thyroid
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5634
+Number of conditions: 0
+Accuracy: 0.8046511627906977
+Time to classify test set: 2776
+
+
+
+================================
+Data set: thyroid
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5634
+Number of conditions: 0
+Accuracy: 0.8
+Time to classify test set: 2731
+
+
+
+================================
+Data set: thyroid
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5634
+Number of conditions: 0
+Accuracy: 0.9116279069767442
+Time to classify test set: 2636
+
+
+
+================================
+Data set: thyroid
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5634
+Number of conditions: 0
+Accuracy: 0.9255813953488372
+Time to classify test set: 2649
+
+
+
+================================
+Data set: thyroid
+Method: index_rules-256
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5634
+Number of conditions: 0
+Accuracy: 0.9441860465116279
+Time to classify test set: 2839
+
+
+
+================================
+Data set: wine
+Method: ensemble_sac_list_classification
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4760.8
+Number of conditions: 5051.8
+Accuracy: 0.9606741573033708
+Time to classify test set: 3167
+
+
+
+================================
+Data set: wine
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4760.8
+Number of conditions: 0
+Accuracy: 0.9325842696629213
+Time to classify test set: 1734
+
+
+
+================================
+Data set: wine
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4760.8
+Number of conditions: 0
+Accuracy: 0.9101123595505618
+Time to classify test set: 1931
+
+
+
+================================
+Data set: wine
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4760.8
+Number of conditions: 0
+Accuracy: 0.9550561797752809
+Time to classify test set: 1903
+
+
+
+================================
+Data set: wine
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4760.8
+Number of conditions: 0
+Accuracy: 0.9606741573033708
+Time to classify test set: 1919
+
+
+
+================================
+Data set: wine
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4760.8
+Number of conditions: 0
+Accuracy: 0.949438202247191
+Time to classify test set: 2027
+
+
+
+================================
+Data set: wine
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4760.8
+Number of conditions: 0
+Accuracy: 0.9550561797752809
+Time to classify test set: 2215
+
+
+
+================================
+Data set: wine
+Method: index_rules-256
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4760.8
+Number of conditions: 0
+Accuracy: 0.9606741573033708
+Time to classify test set: 2511
+
+
+
+================================
+Data set: image_segmentation
+Method: ensemble_sac_list_classification
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 10840.8
+Number of conditions: 18543.7
+Accuracy: 0.8133971291866029
+Time to classify test set: 9594
+
+
+
+================================
+Data set: image_segmentation
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 10840.8
+Number of conditions: 0
+Accuracy: 0.3684210526315789
+Time to classify test set: 6192
+
+
+
+================================
+Data set: image_segmentation
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 10840.8
+Number of conditions: 0
+Accuracy: 0.45933014354066987
+Time to classify test set: 5806
+
+
+
+================================
+Data set: image_segmentation
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 10840.8
+Number of conditions: 0
+Accuracy: 0.6267942583732058
+Time to classify test set: 5475
+
+
+
+================================
+Data set: image_segmentation
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 10840.8
+Number of conditions: 0
+Accuracy: 0.7129186602870813
+Time to classify test set: 5366
+
+
+
+================================
+Data set: image_segmentation
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 10840.8
+Number of conditions: 0
+Accuracy: 0.7751196172248804
+Time to classify test set: 5445
+
+
+
+================================
+Data set: image_segmentation
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 10840.8
+Number of conditions: 0
+Accuracy: 0.8086124401913876
+Time to classify test set: 5852
+
+
+
+================================
+Data set: image_segmentation
+Method: index_rules-256
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 10840.8
+Number of conditions: 0
+Accuracy: 0.8038277511961722
+Time to classify test set: 6660
+
+
+
+================================
+Data set: ionosphere
+Method: ensemble_sac_list_classification
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7916.7
+Number of conditions: 11875.4
+Accuracy: 0.9085714285714286
+Time to classify test set: 8190
+
+
+
+================================
+Data set: ionosphere
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7916.7
+Number of conditions: 0
+Accuracy: 0.8685714285714285
+Time to classify test set: 4603
+
+
+
+================================
+Data set: ionosphere
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7916.7
+Number of conditions: 0
+Accuracy: 0.8771428571428571
+Time to classify test set: 4760
+
+
+
+================================
+Data set: ionosphere
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7916.7
+Number of conditions: 0
+Accuracy: 0.8885714285714286
+Time to classify test set: 4929
+
+
+
+================================
+Data set: ionosphere
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7916.7
+Number of conditions: 0
+Accuracy: 0.8914285714285715
+Time to classify test set: 5120
+
+
+
+================================
+Data set: ionosphere
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7916.7
+Number of conditions: 0
+Accuracy: 0.9142857142857143
+Time to classify test set: 5400
+
+
+
+================================
+Data set: ionosphere
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7916.7
+Number of conditions: 0
+Accuracy: 0.9057142857142857
+Time to classify test set: 6316
+
+
+
+================================
+Data set: ionosphere
+Method: index_rules-256
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7916.7
+Number of conditions: 0
+Accuracy: 0.9057142857142857
+Time to classify test set: 8625
+
+
+================================
+Data set: pendigitis
+Method: ensemble_sac_list_classification
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 58224
+Number of conditions: 205478.2
+Accuracy: 0.9616822429906542
+Time to classify test set: 1205513
+
+
+
+================================
+Data set: pendigitis
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 58224
+Number of conditions: 0
+Accuracy: 0.8257676902536716
+Time to classify test set: 230180
+
+
+
+================================
+Data set: pendigitis
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 58224
+Number of conditions: 0
+Accuracy: 0.923497997329773
+Time to classify test set: 235078
+
+
+
+================================
+Data set: pendigitis
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 58224
+Number of conditions: 0
+Accuracy: 0.9604806408544726
+Time to classify test set: 237948
+
+
+
+================================
+Data set: pendigitis
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 58224
+Number of conditions: 0
+Accuracy: 0.9675567423230975
+Time to classify test set: 235295
+
+
+
+================================
+Data set: pendigitis
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 58224
+Number of conditions: 0
+Accuracy: 0.8296395193591455
+Time to classify test set: 332405
+
+
+
+================================
+Data set: pendigitis
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 58224
+Number of conditions: 0
+Accuracy: 0.8317757009345794
+Time to classify test set: 337727
+
+
+
+================================
+Data set: pendigitis
+Method: index_rules-256
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 58224
+Number of conditions: 0
+Accuracy: 0.8323097463284379
+Time to classify test set: 365323
+
+
+
+================================
+Data set: pima_indians
+Method: ensemble_sac_list_classification
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 32456.8
+Number of conditions: 101371.5
+Accuracy: 0.74609375
+Time to classify test set: 44540
+
+
+
+================================
+Data set: pima_indians
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 32456.8
+Number of conditions: 0
+Accuracy: 0.7447916666666666
+Time to classify test set: 3805
+
+
+
+================================
+Data set: pima_indians
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 32456.8
+Number of conditions: 0 
+Accuracy: 0.7513020833333334
+Time to classify test set: 5086
+
+
+
+================================
+Data set: pima_indians
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 32456.8
+Number of conditions: 0
+Accuracy: 0.7591145833333334
+Time to classify test set: 6367
+
+
+
+================================
+Data set: pima_indians
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 32456.8
+Number of conditions: 0
+Accuracy: 0.7630208333333334
+Time to classify test set: 7832
+
+
+
+================================
+Data set: pima_indians
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 32456.8
+Number of conditions: 0
+Accuracy: 0.7669270833333334
+Time to classify test set: 8751
+
+
+
+================================
+Data set: pima_indians
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 32456.8
+Number of conditions: 0
+Accuracy: 0.7591145833333334
+Time to classify test set: 9268
+
+
+
+================================
+Data set: pima_indians
+Method: index_rules-256
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 32456.8
+Number of conditions: 0
+Accuracy: 0.75390625
+Time to classify test set: 9344
+
+
+
+================================
+Data set: sonar
+Method: ensemble_sac_list_classification
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7423.5
+Number of conditions: 11396.9
+Accuracy: 0.8269230769230769
+Time to classify test set: 4461
+
+
+
+================================
+Data set: sonar
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7423.5
+Number of conditions: 0
+Accuracy: 0.7451923076923077
+Time to classify test set: 3057
+
+
+
+================================
+Data set: sonar
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7423.5
+Number of conditions: 0
+Accuracy: 0.7644230769230769
+Time to classify test set: 2947
+
+
+
+================================
+Data set: sonar
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7423.5
+Number of conditions: 0
+Accuracy: 0.8076923076923077
+Time to classify test set: 2978
+
+
+
+================================
+Data set: sonar
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7423.5
+Number of conditions: 0
+Accuracy: 0.8317307692307693
+Time to classify test set: 3197
+
+
+
+================================
+Data set: sonar
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7423.5
+Number of conditions: 0
+Accuracy: 0.8413461538461539
+Time to classify test set: 3635
+
+
+
+================================
+Data set: sonar
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7423.5
+Number of conditions: 0
+Accuracy: 0.8365384615384616
+Time to classify test set: 4851
+
+
+
+================================
+Data set: sonar
+Method: index_rules-256
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7423.5
+Number of conditions: 0
+Accuracy: 0.8413461538461539
+Time to classify test set: 6926
+
+
+
+================================
+Data set: spectf
+Method: ensemble_sac_list_classification
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 10179.6
+Number of conditions: 18911.4
+Accuracy: 0.8567335243553008
+Time to classify test set: 9874
+
+
+
+================================
+Data set: spectf
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 10179.6
+Number of conditions: 0
+Accuracy: 0.5186246418338109
+Time to classify test set: 5758
+
+
+
+================================
+Data set: spectf
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 10179.6
+Number of conditions: 0
+Accuracy: 0.6848137535816619
+Time to classify test set: 5867
+
+
+
+================================
+Data set: spectf
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 10179.6
+Number of conditions: 0
+Accuracy: 0.8252148997134671
+Time to classify test set: 6067
+
+
+
+================================
+Data set: spectf
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 10179.6
+Number of conditions: 0
+Accuracy: 0.839541547277937
+Time to classify test set: 6414
+
+
+
+================================
+Data set: spectf
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 10179.6
+Number of conditions: 0
+Accuracy: 0.8424068767908309
+Time to classify test set: 7005
+
+
+
+================================
+Data set: spectf
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 10179.6
+Number of conditions: 0
+Accuracy: 0.8595988538681948
+Time to classify test set: 8720
+
+
+
+================================
+Data set: spectf
+Method: index_rules-256
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 10179.6
+Number of conditions: 0
+Accuracy: 0.8624641833810889
+Time to classify test set: 12106

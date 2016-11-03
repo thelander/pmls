@@ -86,7 +86,7 @@ build_rule(TrainExList, ClassList, Conditions, FeatureDTList, BBKey, Parameters,
     ).
 
 %%	This baby should call build tree, be sure to add all children to
-%	the tree...fix a stopping criterion at build tree as well...
+%	the tree...
 select_value(FeatureRanking, Param, ClassIndex, F, List, Op):- 
         (member(rnd_feature(yes), Param) ->
            length(FeatureRanking, FLength),

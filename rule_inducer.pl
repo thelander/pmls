@@ -8,16 +8,8 @@
 %  
 
 :- module(rule_inducer,[run_experiment/3, start/0]).
-%tree, util, model_based_sampling, rnd_uniform, munge, indexing]).
+
 :- use_module([library(lists), library(random), library(codesio), write_results, tree, rule_set, util, model_based_sampling, rnd_uniform, munge, indexing]).
-/*
-	       'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/tree.pl',
-	       'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/util.pl',
-	       'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/model_based_sampling.pl',
-	       'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/rnd_uniform.pl',
-	       'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/munge.pl',
-               'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/indexing.pl']).
-*/
 
 %%increase memory
 :- set_prolog_stack(global, limit(9 000 000 000 000 000 000)).
@@ -36,24 +28,21 @@
 %    assert(rule_no(NewT)).
 
 setup:-
-    %current_directory(_,'C:/Users/tony/Box Sync/jobb/dsv/programmering/Indexing/data_f').              %SICStus prolog
-    working_directory(L,L),                                                                             %SWI-prolog
-    working_directory(L,'C:/jobb/programmering/PLMS/data_f').   %SU
-    %working_directory(L,'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/data_f').   %SCANIA
+    working_directory(L, L),
+    string_concat(L, 'data_f/', PWD),
+    working_directory(L, PWD).
+    %working_directory(L,'C:/jobb/programmering/indexing_code/data_f/').   
 
 experiment([validation_size(0.0), fold_x_v(10)]).
 
-method([%single_model([classification, list_classification, transform(no), rnd_feature(no), min_cov(5), min_margin(0.90)], sac)]). %,
-        ensemble_model(1000, [classification, bagging, list_classification, %generate_ex([mbs(30), rnd_uniform(30), rnd_uniform(50), munge(30, 0.25, 4)]),
-			%     bit_size([4, 8, 16, 32, 64, 128, 256, 512, 1024])
-		index([bit_size([4,8,16,32,64,128,256])]),rnd_feature(no), min_cov(0), min_margin(0.90)], sac)]).
+method([ ensemble_model(1000, [classification, bagging, list_classification, index([bit_size([4,8,16,32,64,128,256])]), rnd_feature(no), min_cov(0), min_margin(0.90)], sac)]).
 
 data([ %set(breast_cancer_wisconsin, relation(_,_,_,_,_,_,_,_,_,_), breast_cancer_wisconsin_cx, breast_cancer_wisconsin_ex_mod),
        %set(bupa, bupa(_,_,_,_,_,_,_), bupa, bupa_ex),                                                                                
        %set(cleveland_heart_disease, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_), cleveland_heart_disease_cx, cleveland_heart_disease_ex_mod),   
-       %set(glass, glass(_,_,_,_,_,_,_,_,_,_), glass, glass_ex),                                                                        
-       %set(haberman, haberman(_,_,_,_), haberman, haberman_data),
-       %set(iris, iris(_,_,_,_,_), iris, iris_data),
+       %set(glass, glass(_,_,_,_,_,_,_,_,_,_), glass, glass_ex)                                                                        
+       %set(haberman, haberman(_,_,_,_), haberman, haberman_data)
+       set(iris, iris(_,_,_,_,_), iris, iris_data)
        %set(thyroid, thyroid(_,_,_,_,_,_), new_thyroid, new_thyroid_ex),
        %set(wine, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_), wine_cx, wine_ex),
        %set(image_segmentation, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_), image_segmentation_cx, image_segmentation_ex),
@@ -87,7 +76,9 @@ process_data([set(Name, Head, BackgroundKnowledge, Examples)|Sets], Parameters, 
 
 use_methods([], _, _, _, _, _, _).
 use_methods([Method|Methods], Folds, Name, Head, Parameters, ExLists, BKList):-
+    write('Starting induction'),nl,
     do_experiment(Folds, Name, Head, Method, ExLists, BKList, Results),
+    write('Writing results'),nl,
     open('Result', append, Stream),
     write_results(Results, Stream, Folds),
     close(Stream),
@@ -112,6 +103,7 @@ retract_inner_loop(_, _, _). %Fail silently
 
 do_experiment(0, _, _, _, _, _, []).
 do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval):-
+    write('Working with fold: '),write(Folds),nl,	
     do_one_fold(Folds, Name, Head, Parameters, ExLists, BKList, PartEval),
     NewFolds is Folds - 1,!,
     do_experiment(NewFolds, Name, Head, Parameters, ExLists, BKList, RestEval),
@@ -149,7 +141,6 @@ post_process_rules(DataName, _Head, TestFold, Method, TestExList, TrainExList, _
      att_min_max(NewTrainExList, Arity, ClassIndex, AttMinMaxList),
      member(bit_size(BitSizeList), IParams),
      add_ex_id(TestExList, TestExWIdList),         %for debugging as of now    
-%trace,
      use_indexing1(BitSizeList, TestFold, Rules, AttMinMaxList, TestExWIdList, DataName, IParams, ClassIndex, CClassTuples, IndexRes),
      classify_rules(DataName, Method, TestExWIdList, ClassIndex, CClassTuples, Keys, NoRules, NoConds, Rules, PartResult),
      append(PartResult, IndexRes, Result).
@@ -261,35 +252,10 @@ classify_rules_list(Method, [(_ExId,TestEx)|TestExs], Rules, ClassIndex, ClassTu
     %write('These rules fired: '),write(RulesFiredList), nl, 
     %nl,
     classify_rules_list(Method, TestExs, Rules, ClassIndex, ClassTuples, NewTempCTup, FCTup, Res).
-/*
-get_rules_votes1([], dac, _, _, C-CT, C-CT).
-get_rules_votes1([tree(TreeRules)|RestRules], dac, NTestEx, ClassIndex, Class-FClassTuples, Class-RSRes):-
-    get_rules_votes(TreeRules, dac, NTestEx, ClassIndex, Class-FClassTuples, _-PartRes),       %One rule per tree! 
-    get_rules_votes1(RestRules, dac, NTestEx, ClassIndex, Class-FClassTuples, _-RestRes, RulesFiredList),
-    joint_dist(RestRes, PartRes, Res),
-    keysort(Res, SRes),
-    reverse(SRes, RSRes).
-*/
+
 get_rules_votes1([], sac, _, _, C-CT, C-CT, []).
 get_rules_votes1([rule_set(Rules)|Rest], sac, NTestEx, ClassIndex, Class-ClassTuples, Class-RSRes, FRulesFiredList):-
     get_rules_votes(Rules, sac, NTestEx, ClassIndex, Class-ClassTuples, _-PartRes, RuleIDL),
-/*
-    (is_zero(PartRes) ->
-      %write('we are zero for this example'),nl,
-      member(rule([],RuleClassDist), Rules),
-      keysort(RuleClassDist, SRuleClasses),                                                     %...until one fires!!
-      reverse(SRuleClasses,[_-RClass|_]),
-      select(No-RClass, PartRes, RestClasses),
-      NewNo is No + 1,
-      append([NewNo-RClass], RestClasses, NewClassTuples),
-      keysort(NewClassTuples, SNewClassTuples),
-      reverse(SNewClassTuples, RSNewClassTuples),
-      NPartRes = RSNewClassTuples
-      
-    ;
-      NPartRes = PartRes
-    ),
-  */
     NPartRes = PartRes,
     get_rules_votes1(Rest, sac, NTestEx, ClassIndex, Class-ClassTuples, _-RestRes, RestRulesFired),
     append(RuleIDL, RestRulesFired, FRulesFiredList),
@@ -304,24 +270,7 @@ is_zero([0-_|R]):-
 get_rules_votes([], _, _NTestEx, _ClassIndex, Class-ClassTuples, Class-RSClassT, []):-
     sort(ClassTuples, SClassT),
     reverse(SClassT, RSClassT).
-%Not fixed below for ID..
-/*
-get_rules_votes([Rule|Rules], dac, NTestEx, ClassIndex, TClass-ClassTuples, CTuples):-
-    copy_term(ClassTuples, CClassTuples),	
-    get_rule_vote(Rule, NTestEx, CClassTuples, ClassDist),
-    (ClassDist = CClassTuples ->
-      get_rules_votes(Rules, dac, NTestEx, ClassIndex, TClass-ClassTuples, CTuples)             %continue trying rules
-    ;
-      keysort(ClassDist, Classes),                                                               %...until one fires!!
-      reverse(Classes,[_-Class|_]),
-      select(No-Class, ClassTuples, Rest),
-      NewNo is No + 1,
-      append([NewNo-Class], Rest, NewClassTuples),
-      keysort(NewClassTuples, SNewClassTuples),
-      reverse(SNewClassTuples, RSNewClassTuples),
-      CTuples = TClass-RSNewClassTuples
-    ).
-*/ 
+ 
 get_rules_votes([rule(Id, Conds, RDist)|Rules], sac, NTestEx, ClassIndex, TClass-ClassTuples, CTuples, FRulesIds):-          %try all rules!
     copy_term(ClassTuples, CClassTuples),	
     get_rule_vote(rule(Id, Conds, RDist), NTestEx, CClassTuples, ClassDist),
@@ -429,16 +378,8 @@ evaluate_index_rules([(_Id,IEx)|IExs], IndexRules, ClassIndex, ClassTuple, TClas
     append([NewNo-ExClass], TCTup, NewTClassD),!,
     evaluate_index_rules(IExs, IndexRules, ClassIndex, ClassTuple, NewTClassD, FClassD, PartEval).
 
-%%Fix from here... use tree and rule set differently for classification
+
 get_class_dist_w_index([], _IEx, _ClassIndex, _CClassTuple, [], []).
-/*
-get_class_dist_w_index([tree(IndexRules)|Trees], IEx, ClassIndex, CClassTuple, RSEvalClass):-
-    get_class_part_dist(IndexRules, IEx, ClassIndex, CClassTuple, PartClass),
-    get_class_dist_w_index(Trees, IEx, ClassIndex, CClassTuple, RestClass),
-    joint_dist(RestClass, PartClass, EvalClass),
-    keysort(EvalClass, SEvalClass),
-    reverse(SEvalClass, RSEvalClass).
-*/
 get_class_dist_w_index([rule_set(IndexRules)|RuleSets], IEx, ClassIndex, CClassTuple, RSEvalClass, FRulesFList):-
     get_class_part_dist(IndexRules, IEx, ClassIndex, CClassTuple, PartClass, PartFiredList),!,
     get_class_dist_w_index(RuleSets, IEx, ClassIndex, CClassTuple, RestClass, RestFiredList),
@@ -447,7 +388,6 @@ get_class_dist_w_index([rule_set(IndexRules)|RuleSets], IEx, ClassIndex, CClassT
     keysort(EvalClass, SEvalClass),
     reverse(SEvalClass, RSEvalClass).
 
-%Move to util later
 joint_dist([],  ClassT, ClassT).
 joint_dist([No-Class|Rest], TempClassT, FClassT):-
     select(OtherNo-Class, TempClassT, SelRest),
@@ -464,7 +404,7 @@ use_sampling_methods([no|R], RulesL, Name, TrainExList, BKList, TestExList, Test
     !,use_sampling_methods(R, RulesL, Name, TrainExList, BKList, TestExList, TestFold, Type, Parameters, Head, ClassIndex, CClassTuples, SampRes).
 use_sampling_methods([rnd_uniform(SampleSize)|R], RulesL, Name, TrainExList, BKList, TestExList, TestFold, Type, Parameters, Head, ClassIndex, ClassT, [PartResult|RestRes]):-
     write('starting rnd_uniform with size: '), write(SampleSize),nl,
-    write_to_codes(rnd_uniform-TestFold-SampleSize, TreeCodes),    %remove testFold here else the evaluation is wrong..?
+    write_to_codes(rnd_uniform-TestFold-SampleSize, TreeCodes),    
     atom_codes(TreeKey,TreeCodes),
     rnd_uniform(TrainExList, RulesL, SampleSize, Head, ClassIndex, ClassT, GeneratedEx),
     append(TrainExList, GeneratedEx, CMMTrainEx),
@@ -492,59 +432,6 @@ use_sampling_methods([mbs(SampleSize)|R], RulesL, Name, TrainExList, BKList, Tes
     evaluate_tree(Type, TestExList, Name, mbs, SampleSize, Tree, BKList, Head, TreeKey, ClassIndex, ClassT, PartResult),!,
     use_sampling_methods(R, RulesL, Name, TrainExList, BKList, TestExList, TestFold, Type, Parameters, Head, ClassIndex, ClassT, RestRes).
 
-%Test classification speed of the indexed tree
-/*
-evaluate_indexed_tree(ITestExList, ITree, DataName, NoRules, ClassIndex, ClassT, result(DataName, indexed_rules, 0, none, ClassT, NoRules, TreeEval, TreeEvalTime)):-
-    statistics(runtime, _),
-    classify_indexed_test_set(ITestExList, ITree, ClassIndex, ClassT, ClassT, ClassDist, TreeRes),
-    statistics(runtime, [_,TreeEvalTime]),
-    length(TreeRes, TreeResL),
-    copy_term(ClassT, CClassT),
-    evaluate(ClassDist, CClassT, TreeRes, TreeResL, TreeEval),!.
-
-classify_indexed_test_set([], _, _, _, FinalCTup, FinalCTup, []).
-classify_indexed_test_set([Ind-TestEx|TestExL], node([],[], NoRules,ILeftTree,IRightTree), ClassIndex, ClassTuples, TempCTup, FCTup, [PartRes|Res]):-
-    TestEx =..[F|Args],
-    nth1(ClassIndex, Args, Class, Rest),
-    nth1(ClassIndex, NewArgs, _, Rest),
-    select(No-Class, TempCTup, TCTup),
-    NewNo is No + 1,
-    append([NewNo-Class], TCTup, NewTempCTup),
-    NTestEx =..[F|NewArgs],
-    get_indexed_votes(ILeftTree, Ind-NTestEx, ClassIndex, Class-ClassTuples, LPartRes),
-    get_indexed_votes(IRightTree,Ind-NTestEx, ClassIndex, Class-ClassTuples, RPartRes),
-    add_votes(LPartRes, RPartRes, PartRes),!,
-    write('IndexPartRes: '),write(PartRes),nl,nl,
-    classify_indexed_test_set(TestExL, node([],[],NoRules,ILeftTree,IRightTree), ClassIndex, ClassTuples, NewTempCTup, FCTup, Res).
-
-add_votes(Class-[], _, Class-[]).
-add_votes(Class-[LNo-C|R], Class-RParts, Class-[No-C|PartsR]):-
-    member(RNo-C, RParts),
-    No is LNo + RNo,
-    add_votes(Class-R, Class-RParts, Class-PartsR).
-	
-get_indexed_votes([], _TestEx, _ClassIndex, TClass-ClassTuples, TClass-RSClassT):-	
-    sort(ClassTuples, SClassT),
-    reverse(SClassT, RSClassT).
-%Crap dist that could not be covered in the induction, not use att all?!
-get_indexed_votes([node(leaf-_, IndexedRules, _NoRules, [], [])], TestEx, ClassIndex, TClass-ClassTuples, TClass-NewClassTuples):-
-    get_class_dist(IndexedRules, TestEx, ClassIndex, ClassTuples, NewClassTuples).	
-%    get_indexed_votes(Rest, TestEx, ClassIndex, TClass-NewClassTuples, CTuples).	
-get_indexed_votes([node(SplitV, [], _NoRules, LeftT, RightT)], ex_i(TestIEx)-Ex, ClassIndex, TClass-ClassTuples, CTuples):-
-    %write('SplitVec: '), pp_bit_v(8, NoArgs, SplitV),
-    %write('ExampleV: '), pp_bit_v(8, NoArgs, TestIEx),nl,	
-    Result is TestIEx /\ SplitV,
-    NoPop is popcount(Result),
-    %write('Pop count: '), write(NoPop),nl,
-    (NoPop > 1 ->
-      %write('Going left'),nl,
-      get_indexed_votes(LeftT, ex_i(TestIEx)-Ex, ClassIndex, TClass-ClassTuples, CTuples)
-    ;
-      %write('Going right'),nl,
-      get_indexed_votes(RightT, ex_i(TestIEx)-Ex, ClassIndex, TClass-ClassTuples, CTuples)
-    ).
-    %get_indexed_votes(Rest, TestEx, ClassIndex, TClass-NewClassTuples, CTuples).	
-*/
 get_class_part_dist([], _-_, _, ClassTuples, ClassTuples, []).
 get_class_part_dist([rule(_,rule_i(_)-rule([], _, _))|Rest], ex_i(Index)-Ex, ClassIndex, TClassTuple, FClassTuple, FRulesFired):- %ignore def. rule
     get_class_part_dist(Rest, ex_i(Index)-Ex, ClassIndex, TClassTuple, FClassTuple, FRulesFired).	
@@ -570,28 +457,7 @@ get_class_part_dist([rule(RId,rule_i(IndexV)-rule(_Cond, NoC, ClassD))|Rest], ex
         %write('Rule no compatible skip'),nl,
         get_class_part_dist(Rest, ex_i(Index)-Ex, ClassIndex, TClassTuple, FClassTuple, FRulesFired)
     ).
-/*
-get_class_dist([], _-_, _, ClassTuples, ClassTuples).	
-get_class_dist([rule_i(IndexV)-rule(_, NoC, ClassD)|Rest], ex_i(Index)-Ex, ClassIndex, TClassTuple, FClassTuple):-
-    %write('Rule Vec: '), pp_bit_v(8, 6, IndexV),
-    %write('ExampleV: '), pp_bit_v(8, 6, Index),nl,
-    CompatibleV is IndexV /\ Index,
-    PopC is popcount(CompatibleV) - 1,  %remove leading 1
-    %write('POP  count: '), write(PopC),nl,
-    %write('Cond count: '), write(NoC),nl,
-    (PopC =:= NoC ->
-        %write('Updating classtuple'),nl,
-        keysort(ClassD,Classes),
-        reverse(Classes, [_-Class|_]),
-	select(No-Class, TClassTuple, RestClasses),
-	NewNo is No + 1,
-        append([NewNo-Class], RestClasses, NewTClassTuple),!,
-        get_class_dist(Rest, ex_i(Index)-Ex, ClassIndex, NewTClassTuple, FClassTuple)
-     ;
-        %write('Rule no compatible skip'),nl,
-        get_class_dist(Rest, ex_i(Index)-Ex, ClassIndex, TClassTuple, FClassTuple)
-    ).
-*/    
+   
 evaluate_tree(Type, TestExList, DataName, SampMethod, SampleSize, Tree, BKList, Head, TreeKey, ClassIndex, ClassT,
 	      result(DataName, SampMethod, SampleSize, TreeKey, ClassT, NoRules, TreeEval, TreeEvalTime)):-
     assert_tree_to_bb(Tree, TreeKey, NoRules, _TreeRules),
@@ -603,7 +469,6 @@ evaluate_tree(Type, TestExList, DataName, SampMethod, SampleSize, Tree, BKList, 
     copy_term(ClassT, CClassT),
     evaluate(ClassDist, CClassT, TreeRes, TreeResL, TreeEval),!.
 
-%Hur hantera NC?! bara låta växa?! eller mellan regler endast...
 remove_all_maj_class_rules([], _, _, _, []).
 remove_all_maj_class_rules([rule(_,Conds,_,ClassT)|Rest], true, _, MajClass, NewRevTransRules):-
      get_majority_class(ClassT, MajClass),!,
@@ -710,7 +575,6 @@ classify_test_set(Type, [TestEx|TestExL], ClassIndex, ClassTuples, TempCTup, FCT
     get_votes(Type, Keys, NTestEx, ClassIndex, Class-ClassTuples, PartRes),!,
     classify_test_set(Type, TestExL, ClassIndex, ClassTuples, NewTempCTup, FCTup, Keys, Res).
 
-%write sac later...
 get_votes(dac, [], _TestEx, _ClassIndex, TClass-ClassTuples, TClass-RSClassT):-
     sort(ClassTuples, SClassT),
     reverse(SClassT, RSClassT).

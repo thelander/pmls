@@ -78,7 +78,7 @@ use_methods([Method|Methods], Folds, Name, Head, Parameters, ExLists, BKList):-
     write('Starting induction'),nl,
     do_experiment(Folds, Name, Head, Method, ExLists, BKList, Results),
     write('Writing results'),nl,
-    open('Result', append, Stream),
+    open('../results.txt', append, Stream),
     write_results(Results, Stream, Folds),
     close(Stream),
     retract_loop(Results, Head, BKList),!,

@@ -33,6 +33,13 @@ setup:-
     working_directory(L, PWD).
     %working_directory(L,'C:/jobb/programmering/indexing_code/data_f/').   
 
+threading(pool):-
+  current_prolog_flag(cpu_count, CpuCount),
+  thread_pool_create(pool, CpuCount, []),
+  write('Using multithreading with '),
+  write(CpuCount),
+  write(' threads'),nl.
+
 experiment([validation_size(0.0), fold_x_v(10)]).
 
 method([ ensemble_model(1000, [classification, bagging, list_classification, index([bit_size([4,8,16,32,64,128,256])]), rnd_feature(no), min_cov(0), min_margin(0.90)], sac)]).
@@ -53,7 +60,8 @@ data([ %set(breast_cancer_wisconsin, relation(_,_,_,_,_,_,_,_,_,_), breast_cance
        %set(spectf, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_), spectf_cx, spectf_ex),       
     ]).
 
-start:-	
+start:-
+    threading(T),
     experiment(E),
     method(M),
     data(D),

@@ -112,10 +112,11 @@ retract_inner_loop(_, _, _). %Fail silently
 do_experiment(0, _, _, _, _, _, []).
 do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval):-
     write('Working with fold: '),write(Folds),nl,	
-    do_one_fold(Folds, Name, Head, Parameters, ExLists, BKList, PartEval),
+    thread_create_in_pool(pool, (do_one_fold(Folds, Name, Head, Parameters, ExLists, BKList, PartEval)), LID, []),
     NewFolds is Folds - 1,!,
     do_experiment(NewFolds, Name, Head, Parameters, ExLists, BKList, RestEval),
     append(PartEval, RestEval, Eval).
+
 do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval):-
     write(Folds), write(Name), write(Head), write(Parameters), write(ExLists), write(BKList), write(Eval),
     do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval).

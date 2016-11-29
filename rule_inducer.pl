@@ -45,7 +45,7 @@ data([ %set(breast_cancer_wisconsin, relation(_,_,_,_,_,_,_,_,_,_), breast_cance
        %set(pendigitis, rel(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_), pendigits_names, pendigits_ex),
        %set(pima_indians, diabetes(_,_,_,_,_,_,_,_,_), pima_indians, pima_indians_ex),
        %set(sonar, mine(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_), sonar, sonar_ex),
-       %set(spectf, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_), spectf_cx, spectf_ex)
+       %set(spectf, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_), spectf_cx, spectf_ex),
     ]).
 
 start:-	
@@ -98,19 +98,27 @@ retract_inner_loop([Key|Keys], Head, BKList):-
     retract_inner_loop(Keys, Head, BKList).
 retract_inner_loop(_, _, _). %Fail silently
 
+replicate(N, Goal, Repeated) :-
+  length(Repeated, N),
+  maplist(=(Goal), Repeated).
+
 do_experiment(0, _, _, _, _, _, []).
 do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval):-
-    write('Working with fold: '),write(Folds),nl,	
-    do_one_fold(Folds, Name, Head, Parameters, ExLists, BKList, PartEval),
+    %write(ExLists), write(BKList),nl,
+    replicate(Folds, do_one_fold(Folds, Name, Head, Parameters, ExLists, BKList, PartEval), FoldList),
+    concurrent_maplist(call, FoldList),
+    %do_one_fold(Folds, Name, Head, Parameters, ExLists, BKList, PartEval),
     NewFolds is Folds - 1,!,
     do_experiment(NewFolds, Name, Head, Parameters, ExLists, BKList, RestEval),
-    append(PartEval, RestEval, Eval).
+    append(PartEval, RestEval, Eval),
+    writeln(Eval).
 do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval):-
     write(Folds), write(Name), write(Head), write(Parameters), write(ExLists), write(BKList), write(Eval),
     do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval).
 
 do_one_fold(TestFold, Name, Head, Method, ExLists, BKList, Result):-
     TestFold \== 0,
+    write('Working with fold: '),write(TestFold),nl, 
     nth1(TestFold, ExLists, TestExList, TrainExList), 
     do_induction(Method, Head, TrainExList, BKList, TestFold, ClassIndex, Keys, _RawInduction, _NoRules, ClassT, Rules),
     clean_conditions(Rules, CleanCondRulesL),

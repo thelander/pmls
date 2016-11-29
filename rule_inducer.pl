@@ -27,11 +27,6 @@
 %    NewT is T + 1,
 %    assert(rule_no(NewT)).
 
-setup:-
-    working_directory(L, L),
-    string_concat(L, 'data_f/', PWD),
-    working_directory(L, PWD).
-
 experiment([validation_size(0.0), fold_x_v(10)]).
 
 method([ ensemble_model(1000, [classification, bagging, list_classification, index([bit_size([4,8,16,32,64,128,256])]), rnd_feature(no), min_cov(0), min_margin(0.90)], sac)]).
@@ -65,8 +60,10 @@ run_experiment(experiment(Parameters), method(Methods), data(DataSets)):-
 
 process_data([], _, _).
 process_data([set(Name, Head, BackgroundKnowledge, Examples)|Sets], Parameters, Methods):-
-    read_from_file(BackgroundKnowledge, BKList),
-    read_from_file(Examples, ExList),
+    atom_concat('data_f/', BackgroundKnowledge, BackgroundKnowledgeFile),
+    atom_concat('data_f/', Examples, ExamplesFile),
+    read_from_file(BackgroundKnowledgeFile, BKList),
+    read_from_file(ExamplesFile, ExList),
     random_permutation(ExList, RndExL),	                        %re-order examples
     member(fold_x_v(Folds), Parameters),
     member(validation_size(VSize),Parameters),
@@ -79,7 +76,7 @@ use_methods([Method|Methods], Folds, Name, Head, Parameters, ExLists, BKList):-
     write('Starting induction'),nl,
     do_experiment(Folds, Name, Head, Method, ExLists, BKList, Results),
     write('Writing results'),nl,
-    open('../results.txt', append, Stream),
+    open('results.txt', append, Stream),
     write_results(Results, Stream, Folds),
     close(Stream),
     retract_loop(Results, Head, BKList),!,
@@ -1006,24 +1003,3 @@ add_e_id([], _, []).
 add_e_id([Ex|Exs], Id, [(Id, Ex)|ExWId]):-
    NewId is Id + 1,	
    add_e_id(Exs, NewId, ExWId).
-
-:- setup.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -48,7 +48,11 @@ data([ %set(breast_cancer_wisconsin, relation(_,_,_,_,_,_,_,_,_,_), breast_cance
        %set(spectf, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_), spectf_cx, spectf_ex)
     ]).
 
-start:-	
+start:-
+    current_prolog_flag(cpu_count, CPUCount),
+    thread_pool_create(thread_pool, CPUCount, []),
+    message_queue_create(message_queue),
+    write('System has '), write(CPUCount), write(' CPUs, using '), write(CPUCount), writeln(' threads'),
     experiment(E),
     method(M),
     data(D),

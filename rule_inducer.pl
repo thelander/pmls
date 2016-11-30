@@ -125,14 +125,12 @@ do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval):-
 do_one_fold(ThreadID, TestFold, Name, Head, Method, ExLists, BKList, Result):-
     TestFold \== 0,
     thread_self(CurrentThreadID),
-    write('Running fold in thread '),writeln(CurrentThreadID),
     nth1(TestFold, ExLists, TestExList, TrainExList), 
     do_induction(Method, Head, TrainExList, BKList, TestFold, ClassIndex, Keys, _RawInduction, _NoRules, ClassT, Rules),
     clean_conditions(Rules, CleanCondRulesL),
     %trace,
     add_rule_id(CleanCondRulesL, RulesWId, NoConds, NoRules),
     post_process_rules(Name, Head, TestFold, Method, TestExList, TrainExList, BKList, ClassIndex, Keys, NoRules, NoConds, ClassT, RulesWId, Result),
-    write('Sending message to thread '),writeln(ThreadID),
     thread_send_message(ThreadID, Result).
 
 

@@ -114,9 +114,8 @@ do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval):-
     write('Working with fold: '),write(Folds),write(' (in thread '),write(ThreadID),writeln(')'),
     NewFolds is Folds - 1,!,
     do_experiment(NewFolds, Name, Head, Parameters, ExLists, BKList, RestEval),
-    thread_get_message(Eval),
-    %process_message_queue(Eval).
-    join_threads.
+    thread_get_message(CurrentEval),
+    append(CurrentEval, RestEval, Eval).
 
 do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval):-
     write(Folds), write(Name), write(Head), write(Parameters), write(ExLists), write(BKList), write(Eval),

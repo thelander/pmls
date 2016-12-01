@@ -52,11 +52,11 @@ start:-
     current_prolog_flag(cpu_count, CPUCount),
     thread_pool_create(thread_pool, CPUCount, []),
     message_queue_create(message_queue),
-    write('System has '), write(CPUCount), write(' CPUs, using '), write(CPUCount), writeln(' threads'),
+    write('Using multithreading with '),write(CPUCount),writeln(' threads'),
     experiment(E),
     method(M),
     data(D),
-    write('Starting experiment'),nl,
+    writeln('Starting experiment'),
     run_experiment(experiment(E), method(M), data(D)).
 
 run_experiment(experiment(Parameters), method(Methods), data(DataSets)):-
@@ -102,16 +102,10 @@ retract_inner_loop([Key|Keys], Head, BKList):-
     retract_inner_loop(Keys, Head, BKList).
 retract_inner_loop(_, _, _). %Fail silently
 
-%process_message_queue([]).
-%process_message_queue([PartEval|RestEval]) :-
-%   thread_get_message(PartEval),
-%   process_message_queue(RestEval).
-
 do_experiment(0, _, _, _, _, _, []).
 do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval):-
-    thread_self(MainThreadID),
-    thread_create_in_pool(thread_pool, do_one_fold(MainThreadID, Folds, Name, Head, Parameters, ExLists, BKList, PartEval), ThreadID, []),
-    write('Working with fold: '),write(Folds),write(' (in thread '),write(ThreadID),writeln(')'),
+    thread_create_in_pool(thread_pool, do_one_fold(Folds, Name, Head, Parameters, ExLists, BKList), ThreadID, []),
+    write('Working with fold: '),write(Folds),write(' (thread: '),write(ThreadID),writeln(')'),
     NewFolds is Folds - 1,!,
     do_experiment(NewFolds, Name, Head, Parameters, ExLists, BKList, RestEval),
     thread_get_message(CurrentEval),
@@ -121,17 +115,15 @@ do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval):-
     write(Folds), write(Name), write(Head), write(Parameters), write(ExLists), write(BKList), write(Eval),
     do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval).
 
-do_one_fold(ThreadID, TestFold, Name, Head, Method, ExLists, BKList, Result):-
+do_one_fold(TestFold, Name, Head, Method, ExLists, BKList):-
     TestFold \== 0,
-    thread_self(CurrentThreadID),
     nth1(TestFold, ExLists, TestExList, TrainExList), 
     do_induction(Method, Head, TrainExList, BKList, TestFold, ClassIndex, Keys, _RawInduction, _NoRules, ClassT, Rules),
     clean_conditions(Rules, CleanCondRulesL),
     %trace,
     add_rule_id(CleanCondRulesL, RulesWId, NoConds, NoRules),
     post_process_rules(Name, Head, TestFold, Method, TestExList, TrainExList, BKList, ClassIndex, Keys, NoRules, NoConds, ClassT, RulesWId, Result),
-    thread_send_message(ThreadID, Result).
-
+    thread_send_message(main, Result).
 
 post_process_rules(DataName, Head, TestFold, Method, TestExList, TrainExList, BKList, ClassIndex, Keys, NoRules, NoConds, ClassT, Rules, Result):-
      get_parameters(Method, Parameters),

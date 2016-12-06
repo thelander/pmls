@@ -49,6 +49,10 @@ data([ %set(breast_cancer_wisconsin, relation(_,_,_,_,_,_,_,_,_,_), breast_cance
     ]).
 
 start:-	
+    current_prolog_flag(cpu_count, CPUCount),
+    thread_pool_create(thread_pool, CPUCount, []),
+    message_queue_create(message_queue),
+    write('Using multithreading with '),write(CPUCount),writeln(' threads'),
     experiment(E),
     method(M),
     data(D),
@@ -142,7 +146,7 @@ post_process_rules(DataName, _Head, TestFold, Method, TestExList, TrainExList, _
      classify_rules(DataName, Method, TestExWIdList, ClassIndex, CClassTuples, Keys, NoRules, NoConds, Rules, PartResult),
      append(PartResult, IndexRes, Result).
 post_process_rules(DataName, _Head, _TestFold, Method,  TestExList, _TrainExList, _BKList, ClassIndex, Keys, NoRules, NoConds, ClassT, Rules, Result):-    
-     write('No post-processing'),nl,	
+     write('No post-processing'),nl,
      copy_term(ClassT, CClassTuples),	
      classify_rules(DataName, Method, TestExList, ClassIndex, CClassTuples,  Keys, NoRules, NoConds, Rules, Result).     	
 
@@ -599,6 +603,7 @@ do_induction(single_model(Parameters, dac), Head, TrainExLists, BKList, BBKey, C
 
 do_induction(ensemble_model(Size, Parameters, sac), Head, TrainExLists, BKList, BBKey, ClassIndex, BBKeys, Trees, NoTrees, ClassT, Rules):-
     join_folds(TrainExLists, NewTrainExList),!,
+	% thread_create_in_pool(thread_pool, do_rule_set(Size, Parameters, Head, NewTrainExList, BKList, BBKey, ClassIndex, _, ClassT, BBKeys, Trees, NoTrees, Rules), ThreadID, []).
     do_rule_set(Size, Parameters, Head, NewTrainExList, BKList, BBKey, ClassIndex, _, ClassT, BBKeys, Trees, NoTrees, Rules).
 
 do_induction(single_model(Parameters, sac), Head, TrainExLists, BKList, BBKey, ClassIndex, BBKeys, Trees, NoTrees, ClassT, Rules):-
@@ -642,7 +647,9 @@ do_rule_set(Size, Parameters, Head, TrainExList, BKList, BBKey, ClassIndex, _Cla
     ),
     write_to_codes(Size-BBKey, RuleSetCodes),
     atom_codes(RuleSetKey, RuleSetCodes),
-    rule_set(NewTrainExList, BKList, Parameters, Head, RuleSetKey, ClassIndex, NewClassT, RuleSet, _DefaultFact),
+	thread_create_in_pool(thread_pool, rule_set(NewTrainExList, BKList, Parameters, Head, RuleSetKey, ClassIndex, NewClassT, RuleSet, _DefaultFact), ThreadID, []),
+	write('Working with set nr: '),write(Size),write(' (thread: '),write(ThreadID),writeln(')'),
+    % rule_set(NewTrainExList, BKList, Parameters, Head, RuleSetKey, ClassIndex, NewClassT, RuleSet, _DefaultFact),
     NewSize is Size - 1,!,    
     (member(list_classification, Parameters) ->
       Head =.. [_|HVarList],

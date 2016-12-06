@@ -9,6 +9,9 @@
 :- use_module([library(lists), library(random), util]).
 
 rule_set(TrainExList, BKList, Parameters, Head, BBKey, ClassIndex, ClassTupleC, RoughRuleSet, CHead):-
+	current_prolog_flag(cpu_count, CPUCount),
+    thread_pool_create(thread_pool, CPUCount, []),
+    message_queue_create(message_queue),
     %write('Starting to build rule set...'),nl,
 	%trace,
     assert_bb(BKList,BBKey), %assert background knowledge, used when building the tree
@@ -24,6 +27,7 @@ rule_set(TrainExList, BKList, Parameters, Head, BBKey, ClassIndex, ClassTupleC, 
     reverse(SortedTuples, [_-DefaultClass|_]),
     copy_term(Head,CHead),
     CHead =.. [_|Args],
+	thread_send_message(main, Result),
     nth1(ClassIndex, Args, DefaultClass).
 
 build_rule_set([], _, _, _, _, _, _, []).

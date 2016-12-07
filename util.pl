@@ -444,10 +444,10 @@ clean_conditions([rule_set(TreeRules)|Trees], Result):-
     clean_condition(TreeRules, PartRes),
     clean_conditions(Trees, RestRes),
     append([rule_set(PartRes)], RestRes, Result).
-clean_conditions([tree(TreeRules)|Trees], Result):-
-    clean_condition(TreeRules, PartRes),
-    clean_conditions(Trees, RestRes),
-    append([tree(PartRes)], RestRes, Result).
+clean_conditions([tree(TreeRules)|Trees], [tree(TreeRules)|Trees]).
+    %clean_condition(TreeRules, PartRes),
+    %clean_conditions(Trees, RestRes),
+    %append([tree(PartRes)], RestRes, Result).
 
 clean_condition([], []).
 %clean_condition([rule([],_ClassT)|CCs], NewClassConditionList):-

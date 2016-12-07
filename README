@@ -1,10 +1,1 @@
-Then load rule_inducer.pl into the SWI-prolog environment. 
-Remove comments (%) from data set(s) to choose which data set to run. 
-Default is only the iris data set.
-Start the system by typing "start." from the command prompt. 
-The results will be printed in a file "results.txt".
-    
-
-Best regards,
-
-Tony Lindgren   
+This is a template README file created in new Prolog projects.

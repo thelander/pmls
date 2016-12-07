@@ -1,0 +1,329 @@
+================================
+Data set: breast_cancer_wisconsin
+Method: ensemble_sac_list_classification
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8231.1
+Accuracy: 0.9599427753934192
+Time to classify test set: 9828
+================================
+Data set: breast_cancer_wisconsin
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8231.1
+Accuracy: 0.9284692417739628
+Time to classify test set: 1998
+================================
+Data set: breast_cancer_wisconsin
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8231.1
+Accuracy: 0.9284692417739628
+Time to classify test set: 2094
+================================
+Data set: breast_cancer_wisconsin
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8231.1
+Accuracy: 0.9542203147353362
+Time to classify test set: 2204
+================================
+Data set: breast_cancer_wisconsin
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8231.1
+Accuracy: 0.949928469241774
+Time to classify test set: 2156
+================================
+Data set: breast_cancer_wisconsin
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8231.1
+Accuracy: 0.949928469241774
+Time to classify test set: 2263
+================================
+Data set: breast_cancer_wisconsin
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8231.1
+Accuracy: 0.949928469241774
+Time to classify test set: 2299
+================================
+Data set: breast_cancer_wisconsin
+Method: index_rules-256
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8231.1
+Accuracy: 0.9384835479256081
+Time to classify test set: 2579
+
+
+
+================================
+Data set: bupa
+Method: ensemble_sac_list_classification
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 21330.8
+Accuracy: 0.7101449275362319
+Time to classify test set: 10628
+================================
+Data set: bupa
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 21330.8
+Accuracy: 0.5768115942028985
+Time to classify test set: 1001
+================================
+Data set: bupa
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 21330.8
+Accuracy: 0.6
+Time to classify test set: 1109
+================================
+Data set: bupa
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 21330.8
+Accuracy: 0.6869565217391305
+Time to classify test set: 1722
+================================
+Data set: bupa
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 21330.8
+Accuracy: 0.6898550724637681
+Time to classify test set: 2063
+================================
+Data set: bupa
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 21330.8
+Accuracy: 0.7130434782608696
+Time to classify test set: 2438
+================================
+Data set: bupa
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 21330.8
+Accuracy: 0.7101449275362319
+Time to classify test set: 2625
+================================
+Data set: bupa
+Method: index_rules-256
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 21330.8
+Accuracy: 0.7159420289855073
+Time to classify test set: 2857
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: ensemble_sac_list_classification
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29811
+Accuracy: 0.5733333333333334
+Time to classify test set: 16624
+================================
+Data set: cleveland_heart_disease
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29811
+Accuracy: 0.5466666666666666
+Time to classify test set: 2171
+================================
+Data set: cleveland_heart_disease
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29811
+Accuracy: 0.5866666666666667
+Time to classify test set: 2548
+================================
+Data set: cleveland_heart_disease
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29811
+Accuracy: 0.5933333333333334
+Time to classify test set: 2671
+================================
+Data set: cleveland_heart_disease
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29811
+Accuracy: 0.5933333333333334
+Time to classify test set: 2939
+================================
+Data set: cleveland_heart_disease
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29811
+Accuracy: 0.5833333333333334
+Time to classify test set: 4610
+================================
+Data set: cleveland_heart_disease
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29811
+Accuracy: 0.6
+Time to classify test set: 4670
+================================
+Data set: cleveland_heart_disease
+Method: index_rules-256
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29811
+Accuracy: 0.59
+Time to classify test set: 5266
+
+
+
+================================
+Data set: glass
+Method: ensemble_sac_list_classification
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4087.9
+Accuracy: 0.9363636363636364
+Time to classify test set: 1017
+================================
+Data set: glass
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4087.9
+Accuracy: 0.9454545454545454
+Time to classify test set: 297
+================================
+Data set: glass
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4087.9
+Accuracy: 0.9363636363636364
+Time to classify test set: 359
+================================
+Data set: glass
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4087.9
+Accuracy: 0.9363636363636364
+Time to classify test set: 342
+================================
+Data set: glass
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4087.9
+Accuracy: 0.9272727272727272
+Time to classify test set: 358
+================================
+Data set: glass
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4087.9
+Accuracy: 0.9272727272727272
+Time to classify test set: 343
+================================
+Data set: glass
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4087.9
+Accuracy: 0.9363636363636364
+Time to classify test set: 328
+================================
+Data set: glass
+Method: index_rules-256
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4087.9
+Accuracy: 0.9363636363636364
+Time to classify test set: 344

@@ -8,7 +8,7 @@
 :- use_module([library(lists), library(random), util]).
 
 tree(TrainExList, BKList, Parameters, Head, BBKey, ClassIndex, ClassT, Tree, CHead):-
-    write('Starting to build tree...'),nl,	
+    %write('Starting to build tree...'),nl,	
     assert_bb(BKList,BBKey), %assert background knowledge, used when building the tree
     feature_data_type(Head, BBKey, FeatureDTList),
     member(classification, Parameters),

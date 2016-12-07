@@ -1,0 +1,321 @@
+================================
+Data set: breast_cancer_wisconsin
+Method: ensemble_sac_list_classification
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8217.7
+Accuracy: 0.9613733905579399
+Time to classify test set: 9780
+
+================================
+Data set: breast_cancer_wisconsin
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8217.7
+Accuracy: 0.9256080114449213
+Time to classify test set: 2047
+
+================================
+Data set: breast_cancer_wisconsin
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8217.7
+Accuracy: 0.9241773962804005
+Time to classify test set: 2235
+
+================================
+Data set: breast_cancer_wisconsin
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8217.7
+Accuracy: 0.9542203147353362
+Time to classify test set: 2235
+
+================================
+Data set: breast_cancer_wisconsin
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8217.7
+Accuracy: 0.9513590844062947
+Time to classify test set: 2390
+
+================================
+Data set: breast_cancer_wisconsin
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8217.7
+Accuracy: 0.9513590844062947
+Time to classify test set: 2330
+
+================================
+Data set: breast_cancer_wisconsin
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8217.7
+Accuracy: 0.9513590844062947
+Time to classify test set: 2313
+
+================================
+Data set: bupa
+Method: ensemble_sac_list_classification
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 21390.7
+Accuracy: 0.7478260869565218
+Time to classify test set: 10483
+
+================================
+Data set: bupa
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 21390.7
+Accuracy: 0.5884057971014492
+Time to classify test set: 1031
+
+================================
+Data set: bupa
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 21390.7
+Accuracy: 0.5884057971014492
+Time to classify test set: 1093
+
+================================
+Data set: bupa
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 21390.7
+Accuracy: 0.7043478260869566
+Time to classify test set: 1750
+
+================================
+Data set: bupa
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 21390.7
+Accuracy: 0.7072463768115942
+Time to classify test set: 2220
+
+================================
+Data set: bupa
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 21390.7
+Accuracy: 0.7275362318840579
+Time to classify test set: 2626
+
+================================
+Data set: bupa
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 21390.7
+Accuracy: 0.7159420289855073
+Time to classify test set: 2844
+
+================================
+Data set: glass
+Method: ensemble_sac_list_classification
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 3726.2
+Accuracy: 0.9454545454545454
+Time to classify test set: 814
+
+================================
+Data set: glass
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 3726.2
+Accuracy: 0.9545454545454546
+Time to classify test set: 285
+
+================================
+Data set: glass
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 3726.2
+Accuracy: 0.9363636363636364
+Time to classify test set: 326
+
+================================
+Data set: glass
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 3726.2
+Accuracy: 0.9454545454545454
+Time to classify test set: 362
+
+================================
+Data set: glass
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 3726.2
+Accuracy: 0.9363636363636364
+Time to classify test set: 330
+
+================================
+Data set: glass
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 3726.2
+Accuracy: 0.9363636363636364
+Time to classify test set: 295
+
+================================
+Data set: glass
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 3726.2
+Accuracy: 0.9363636363636364
+Time to classify test set: 328
+
+
+
+================================
+Data set: haberman
+Method: ensemble_sac_list_classification
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 2753.6
+Accuracy: 0.7156862745098039
+Time to classify test set: 1531
+
+
+
+================================
+Data set: haberman
+Method: index_rules-4
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 2753.6
+Accuracy: 0.7287581699346405
+Time to classify test set: 189
+
+
+
+================================
+Data set: haberman
+Method: index_rules-8
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 2753.6
+Accuracy: 0.7254901960784313
+Time to classify test set: 171
+
+
+
+================================
+Data set: haberman
+Method: index_rules-16
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 2753.6
+Accuracy: 0.7254901960784313
+Time to classify test set: 158
+
+
+
+================================
+Data set: haberman
+Method: index_rules-32
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 2753.6
+Accuracy: 0.7124183006535948
+Time to classify test set: 297
+
+
+
+================================
+Data set: haberman
+Method: index_rules-64
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 2753.6
+Accuracy: 0.696078431372549
+Time to classify test set: 297
+
+
+
+================================
+Data set: haberman
+Method: index_rules-128
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 2753.6
+Accuracy: 0.7026143790849673
+Time to classify test set: 249

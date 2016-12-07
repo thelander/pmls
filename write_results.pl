@@ -9,23 +9,23 @@
 :- module(write_results,[write_results/3]).
 
 write_results([], _, _).
-write_results([result(DataSet, Method, MethodSize, _Key, ClassT, NoRules, NoConds, Eval, EvalTime)|Rest], Stream, Folds):-
-	%trace,
-    find_and_remove(Rest, DataSet, Method, MethodSize, NoRulesL, NoCondsL, EvalList, EvalTimeList, NewRest),
+write_results([result(DataSet, Method, MethodSize, _Key, ClassT, NoRules, _NoConds, Eval, EvalTime)|Rest], Stream, Folds):-
+    %trace,
+    find_and_remove(Rest, DataSet, Method, MethodSize, NoRulesL, _NoCondsL, EvalList, EvalTimeList, NewRest),
     (is_list(NoRules)->
       sumlist(NoRules, TempRules),
       sum_list_c(NoRulesL, TempRules, TotRules)     
     ;
       sum_list_c(NoRulesL, NoRules, TotRules)
     ),
-    (is_list(NoConds)->
-      sumlist(NoConds, TempConds),
-      sum_list_c(NoCondsL, TempConds, TotConds)     
-    ;
-      sum_list_c(NoCondsL, NoConds, TotConds)
-    ),
+    %(is_list(NoConds)->
+    %  sumlist(NoConds, TempConds),
+    %  sum_list_c(NoCondsL, TempConds, TotConds)     
+    %;
+    %  sum_list_c(NoCondsL, NoConds, TotConds)
+    %),
     AverageRules is TotRules / Folds,
-    AverageConds is TotConds / Folds,
+    %AverageConds is TotConds / Folds,
     summarize_evaluation(EvalList, Eval, EvalTimeList, EvalTime, AggregatedValues, AggregatedTime),
     nl(Stream),nl(Stream),
     nl(Stream),
@@ -41,8 +41,8 @@ write_results([result(DataSet, Method, MethodSize, _Key, ClassT, NoRules, NoCond
     write(Stream,'--------------------------------'),nl(Stream),
     write(Stream,'Number of rules: '),
     write(Stream,AverageRules),nl(Stream),
-    write(Stream,'Number of conditions: '),
-    write(Stream, AverageConds),nl(Stream),
+    %write(Stream,'Number of conditions: '),
+    %write(Stream, AverageConds),nl(Stream),
     get_statistics(AggregatedValues, Stream, ClassT, _Accuracy, _AUC, _ROC, _Precision, _Recall, _ConfusionMatrix),
     write(Stream,'Time to classify test set: '),
     write(Stream,AggregatedTime),nl(Stream),
@@ -85,64 +85,88 @@ summarize_evaluation1([Class-[Cov,TP,FP,FN,False]|Rest], TempCov_TP_FP_FN_F, FSu
     summarize_evaluation1(Rest,  NewTempCov_TP_FP_FN_F, FSum).
 
 %Loops many times, not so efficent...
-get_statistics(AggValues, Stream, _ClassTuples, Accuracy, _AUC, _ROC, _Precision, _Recall, _ConfusionMatrix):-
+get_statistics(AggValues, Stream, _ClassTuples, Accuracy, _AUC, _ROC, Precision, Recall, _ConfusionMatrix):-
     get_accuracy(AggValues, 0, 0, Accuracy),
     write(Stream,'Accuracy: '),
-    write(Stream, Accuracy),nl(Stream). %We only do accuracy
-    %get_precision(AggValues, ClassTuples, Precision),
-    %get_recall(AggValues, ClassTuples, Recall),
-    %write(Stream,'Confusion matrix: '),nl,
+    write(Stream, Accuracy),nl(Stream), %We only do accuracy
+    get_precision(AggValues, ClassTuples, Stream, Precision),
+    get_recall(AggValues, ClassTuples, Stream, Recall),
+    write(Stream,'Confusion matrix: '),nl(Stream).
     %format(Stream,'~w ~t ~w ~n',['Corr. class','Pred. class']),
     %length(ClassTuples, CTL),
-    %write_f_row(ClassTuples, Stream,1),
-    %get_confusion_mat(AggValues, ClassTuples, 0, CTL,  ConfusionMatrix).
+    %write_f_row(ClassTuples, Stream, 1),
+    %make_cost_mat(ClassTuples, ClassTuples, 1, CostMatrix),
+    %get_confusion_mat(AggValues, ClassTuples, 0, CTL,  Stream, ConfusionMatrix, 0, Numerator, 0, Denominator, CostMatrix),
+    %CostValue is Numerator / Denominator,
+    %write(Stream, 'CostValue of ACC is: '),write(Stream, CostValue),nl(Stream).
 
-write_f_row([], _, _):-
-    nl.
+%Not general at all...
+make_cost_mat([_-C1,_-C2,_-C3], ClassTuples, 1, [[C1-8,C2-4,C3-8]|Rest]):-
+	make_cost_mat(ClassTuples, ClassTuples, 2, Rest).
+make_cost_mat([_-C1,_-C2,_-C3], ClassTuples, 2, [[C1-1,C2-1,C3-1]|Rest]):-
+	make_cost_mat(ClassTuples, ClassTuples, 3, Rest).
+make_cost_mat([_-C1,_-C2,_-C3], _, 3, [[C1-8,C2-4,C3-8]]).
+
+write_f_row([], Stream, _):-
+    nl(Stream).
 write_f_row([_-Class|CT], Stream, I):-
     %Tab is I * 5,
     format(Stream,'~t ~t ~t ~t ~w',[Class]),
     write_f_row(CT, Stream,I).
 
-get_confusion_mat(_, _, CTL, CTL, []).
-get_confusion_mat(AggVals, ClassTuple, I, CTL, [Class-Row|Rec]):-
+get_confusion_mat(_, _, CTL, CTL, _, [], Numerator, Numerator, Denominator, Denominator, _).
+get_confusion_mat(AggVals, ClassTuple, I, CTL, Stream, [Class-Row|Rec], TNum, Num, TDenom, Denom, CostM):-
     NewI is I + 1,
     nth1(NewI, ClassTuple, _-Class),
-    write_row(AggVals, Class, NewI, ClassTuple, Row), nl,
-    get_confusion_mat(AggVals, ClassTuple, NewI, CTL, Rec).
+    nth1(NewI, CostM, RCostM),
+    write_row(AggVals, Class, NewI, ClassTuple, Stream, Row, TNum, PNum, TDenom, PDenom, RCostM),
+    nl(Stream),
+    get_confusion_mat(AggVals, ClassTuple, NewI, CTL, Stream, Rec, PNum, Num, PDenom, Denom, CostM).
 
-write_row(AggVals, Class, I, CT, Row):-
+write_row(AggVals, Class, I, CT, Stream, Row, TNum, Num, TDenom, Denom, RCostM):-
     member(Class-[_, TP, _, _, Row], AggVals),
-    write(Class),
-    write_before(I, CT, Row),
-    format('~t ~d ',[TP]),
+    get_row_denom(Row, RCostM, TDenom, PartDenom),
+    write('Row: '), write(Row),nl,
+    write(Stream, Class),
+    write_before(I, CT, Stream, Row),
+    format(Stream, '~t ~d ',[TP]),
+    member(Class-Cost, RCostM),
+    PartNum is (TP * Cost),
+    Num is PartNum + TNum,
+    Denom is PartNum + PartDenom,
     length(CT, ClassL),
     ClassL1 is ClassL + 1,
     NextI is I + 1,
-    write_after(NextI, CT, ClassL1, Row).
+    write_after(NextI, CT, ClassL1, Stream, Row).
 
-write_after(ClassL, _, ClassL, _).
-write_after(I, CT, ClassL, Row):-
-    nth1(I, CT, C),
-    write_rr(C, Row),
+get_row_denom([], _, Denom, Denom). 	   
+get_row_denom([No-Class|Row], RCostM, TDenom, Denom):-
+    member(Class-Cost, RCostM),
+    NewTDenom is (No * Cost) + TDenom,
+    get_row_denom(Row, RCostM, NewTDenom, Denom).
+	
+write_after(ClassL, _, ClassL, _, _).
+write_after(I, CT, ClassL, Stream, Row):-
+    nth1(I, CT, C),	
+    write_rr(C, Stream, Row),
     NewI is I + 1,
-    write_after(NewI, CT, ClassL, Row).
+    write_after(NewI, CT, ClassL, Stream, Row).
 
-write_before(1, _, _).
-write_before(I, [CT|CTs], Row):-
-    write_rr(CT, Row),
+write_before(1, _, _, _).
+write_before(I, [CT|CTs], Stream, Row):-
+    write_rr(CT, Stream, Row),
     NewI is I - 1,
-    write_before(NewI, CTs, Row).
+    write_before(NewI, CTs, Stream, Row).
 
 %write_rr([],_):-
 %    nl.
-write_rr(_-Class,RR):-
+write_rr(_-Class, Stream, RR):-
     member(No-Class,RR),
-    format('~t ~d ',[No]).%,
+    format(Stream, '~t ~d ',[No]).%,
     %write_rr(CTs,RR).
 
-get_precision([],[],[]).
-get_precision(AggVals,[_-Class|CT],[Class-Precision|Prec]):-
+get_precision([],[],_,[]).
+get_precision(AggVals,[_-Class|CT],Stream,[Class-Precision|Prec]):-
     select(Class-[_, TP, FP, _, _],AggVals,Rest),
     Denominator is TP + FP,
     (Denominator = 0 ->
@@ -150,8 +174,8 @@ get_precision(AggVals,[_-Class|CT],[Class-Precision|Prec]):-
     ;
        Precision is TP / Denominator
     ),
-    write('Precision for class: '),write(Class),write(' is: '),write(Precision),nl,
-    get_precision(Rest,CT,Prec).
+    write(Stream,'Precision for class: '),write(Stream,Class),write(Stream,' is: '),write(Stream,Precision),nl(Stream),
+    get_precision(Rest,CT,Stream,Prec).
 
 get_accuracy([], Tot, TP, Accuracy):-
     (Tot = 0 ->
@@ -164,12 +188,12 @@ get_accuracy([_-[No, TP, _, _, _]|R], TTot, TTP, Accuracy):-
     NewTP is TTP + TP,
     get_accuracy(R, NewTot, NewTP, Accuracy).
 
-get_recall([],[],[]).
-get_recall(AggVals,[_-Class|CT],[Class-Recall|Rec]):-
+get_recall([],[],_,[]).
+get_recall(AggVals,[_-Class|CT],Stream,[Class-Recall|Rec]):-
     select(Class-[_, TP, _, FN, _],AggVals,Rest),
     Recall is TP / (TP + FN),
-    write('Recall for class: '),write(Class),write(' is: '),write(Recall),nl,
-    get_recall(Rest,CT,Rec).
+    write(Stream,'Recall for class: '),write(Stream,Class),write(Stream, ' is: '),write(Stream,Recall),nl(Stream),
+    get_recall(Rest,CT,Stream,Rec).
 
 sum_fn([], _, []):-!.
 sum_fn([No-Class|Rest], TempFN, [NewNo-Class|Zz]):-

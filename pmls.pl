@@ -1,5 +1,6 @@
 %%%%
 % Machine learning system for experimental purposes
+% PLMS = Prolog Machine Learning System
 %
 % Author: Tony Lindgren
 %
@@ -7,17 +8,21 @@
 %
 %  
 
-:- module(rule_inducer,[run_experiment/3, start/0]).
+:- module(plms,[run_experiment/3, start/0]).
 %tree, util, model_based_sampling, rnd_uniform, munge, indexing]).
-:- use_module([library(lists), library(random), library(codesio), write_results, tree, rule_set, util, model_based_sampling, rnd_uniform, munge, indexing]).
-/*
-	       'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/tree.pl',
-	       'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/util.pl',
-	       'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/model_based_sampling.pl',
-	       'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/rnd_uniform.pl',
-	       'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/munge.pl',
-               'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/indexing.pl']).
-*/
+:- use_module([library(csv), library(lists), library(random), library(codesio),
+	       %write_results, tree, rule_set, util, model_based_sampling, rnd_uniform, munge, indexing]).
+
+	       'C:/repository/prolog_machine_learning_system_PMLS/trunk/write_results.pl',
+	       'C:/repository/prolog_machine_learning_system_PMLS/trunk/tree.pl',
+	       'C:/repository/prolog_machine_learning_system_PMLS/trunk/rule_set.pl',
+	       'C:/repository/prolog_machine_learning_system_PMLS/trunk/util.pl',
+	       'C:/repository/prolog_machine_learning_system_PMLS/trunk/model_based_sampling.pl',
+               'C:/repository/prolog_machine_learning_system_PMLS/trunk/rnd_uniform.pl',
+               'C:/repository/prolog_machine_learning_system_PMLS/trunk/munge.pl',
+               'C:/repository/prolog_machine_learning_system_PMLS/trunk/indexing.pl'
+	      ]).
+
 
 %%increase memory
 :- set_prolog_stack(global, limit(9 000 000 000 000 000 000)).
@@ -35,36 +40,52 @@
 %    NewT is T + 1,
 %    assert(rule_no(NewT)).
 
+%TODO: Create documentation on all possible input parameters!
+% fix csv input for classification...add weights to attibutes!
+
 setup:-
-    %current_directory(_,'C:/Users/tony/Box Sync/jobb/dsv/programmering/Indexing/data_f').              %SICStus prolog
-    working_directory(L,L),                                                                             %SWI-prolog
-    working_directory(L,'C:/jobb/programmering/PLMS/data_f').   %SU
-    %working_directory(L,'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/data_f').   %SCANIA
+    %current_directory(_,'C:/Users/tony/Box Sync/jobb/dsv/programmering/Indexing/data').     %SICStus prolog
+    working_directory(L,L),
+    working_directory(L,'C:/repository/prolog_machine_learning_system_PMLS/trunk/').   %Home ismis comp
+    %working_directory(L,'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/data').   %SCANIA
 
 experiment([validation_size(0.0), fold_x_v(10)]).
 
-method([%single_model([classification, list_classification, transform(no), rnd_feature(no), min_cov(5), min_margin(0.90)], sac)]). %,
-        ensemble_model(1000, [classification, bagging, list_classification, %generate_ex([mbs(30), rnd_uniform(30), rnd_uniform(50), munge(30, 0.25, 4)]),
-			%     bit_size([4, 8, 16, 32, 64, 128, 256, 512, 1024])
-		index([bit_size([4,8,16,32,64,128,256])]),rnd_feature(no), min_cov(0), min_margin(0.90)], sac)]).
+method([%single_model([error_est(sq_err)], linear_regression)]). %,
+        %single_model([classification, list_classification, transform(no), rnd_feature(no), min_cov(5), min_margin(0.90)], sac) %,
+        ensemble_model(100, [classification, bagging, list_classification, rnd_feature(no), min_cov(0), min_margin(0.90)], dac)      
+	%generate_ex([mbs(30), rnd_uniform(30), rnd_uniform(50), munge(30, 0.25, 4)]),
+	%bit_size([4, 8, 16, 32, 64, 128, 256, 512, 1024])
+	%index([bit_size([4,8,16,32,64,128,256])]),
+       
+       ]).
 
-data([ %set(breast_cancer_wisconsin, relation(_,_,_,_,_,_,_,_,_,_), breast_cancer_wisconsin_cx, breast_cancer_wisconsin_ex_mod),
-       %set(bupa, bupa(_,_,_,_,_,_,_), bupa, bupa_ex),                                                                                
-       %set(cleveland_heart_disease, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_), cleveland_heart_disease_cx, cleveland_heart_disease_ex_mod),   
-       %set(glass, glass(_,_,_,_,_,_,_,_,_,_), glass, glass_ex),                                                                        
-       %set(haberman, haberman(_,_,_,_), haberman, haberman_data),
-       %set(iris, iris(_,_,_,_,_), iris, iris_data),
-       %set(thyroid, thyroid(_,_,_,_,_,_), new_thyroid, new_thyroid_ex),
-       %set(wine, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_), wine_cx, wine_ex),
-       %set(image_segmentation, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_), image_segmentation_cx, image_segmentation_ex),
-       %set(ionosphere, good_radar(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_), ionosphere, ionosphere_ex),
-       %set(pendigitis, rel(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_), pendigits_names, pendigits_ex),
-       %set(pima_indians, diabetes(_,_,_,_,_,_,_,_,_), pima_indians, pima_indians_ex),
-       %set(sonar, mine(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_), sonar, sonar_ex),
-       %set(spectf, relation(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_), spectf_cx, spectf_ex),       
+
+
+%new file meta information and new data input, csv
+%also altered old prolog format...
+
+%all csv create a tuple of Name(Xinput, Yval/Class)
+data([%set(ex, prolog, [background_head(ex/31),   background_file('ismis_data/ismis_cx_no_id'), example_file('ismis_data/pre_process_training_data_no_id')])
+      %set(ex, prolog, [background_head(ex/32),   background_file('ismis_data/ismis_cx_id'), example_file('ismis_data/pre_process_training_data_id')])
+       %set(hubble, csv, [filename('regression_data/hubble.csv'), convert(true), functor(hubble), y_cols([3]), x_cols([4])])
+       %set(breast_cancer_wisconsin, prolog, [background_head(relation/10),   background_file('classification_data/breast_cancer_wisconsin_cx'), example_file('classification_data/breast_cancer_wisconsin_ex_mod')]),
+       %set(bupa,                    prolog, [background_head(bupa/7),        background_file('classification_data/bupa'),                       example_file('classification_data/bupa_ex')]),
+       %set(cleveland_heart_disease, prolog, [background_head(relation/14),   background_file('classification_data/cleveland_heart_disease_cx'), example_file('classification_data/cleveland_heart_disease_ex_mod')]),   
+       %set(glass,                   prolog, [background_head(glass/10),      background_file('classification_data/glass'),                      example_file('classification_data/glass_ex')]),
+       %set(haberman,                prolog, [background_head(haberman/4),    background_file('classification_data/haberman'),                   example_file('classification_data/haberman_data')]),
+       set(iris,                    prolog, [background_head(iris/5),        background_file('classification_data/iris'),                       example_file('classification_data/iris_data')])
+       %set(thyroid,                 prolog, [background_head(thyroid/6),     background_file('classification_data/new_thyroid'),                example_file('classification_data/new_thyroid_ex')]),
+       %set(wine,                    prolog, [background_head(relation/14),   background_file('classification_data/wine_cx'),                    example_file('classification_data/wine_ex')]),
+       %set(image_segmentation,      prolog, [background_head(relation/20),   background_file('classification_data/image_segmentation_cx'),      example_file('classification_data/image_segmentation_ex')]),
+       %set(ionosphere,              prolog, [background_head(good_radar/35), background_file('classification_data/ionosphere'),                 example_file('classification_data/ionosphere_ex')]),
+       %set(pendigitis,              prolog, [background_head(rel/17),        background_file('classification_data/pendigits_names'),            example_file('classification_data/pendigits_ex')]),
+       %set(pima_indians,            prolog, [background_head(diabetes/9),    background_file('classification_data/pima_indians'),               example_file('classification_data/pima_indians_ex')]),
+       %set(sonar,                   prolog, [background_head(mine/63),       background_file('classification_data/sonar'),                      example_file('classification_data/sonar_ex')]),
+       %set(spectf,                  prolog, [background_head(relation/47),   background_file('classification_data/spectf_cx'),                  example_file('classification_data/spectf_ex')]),       
     ]).
 
-start:-	
+start:-
     experiment(E),
     method(M),
     data(D),
@@ -72,23 +93,44 @@ start:-
     run_experiment(experiment(E), method(M), data(D)).
 
 run_experiment(experiment(Parameters), method(Methods), data(DataSets)):-
+   (member(seed(Seed), Parameters)->
+    set_random(seed(Seed))                            %use it if we got it!
+   ;
+    true),
     process_data(DataSets, Parameters, Methods).
 
 process_data([], _, _).
-process_data([set(Name, Head, BackgroundKnowledge, Examples)|Sets], Parameters, Methods):-
+process_data([set(Name, prolog, InfoList)|Sets], Parameters, Methods):-
+    interpret_info(InfoList, Head, BackgroundKnowledge, Examples),	
     read_from_file(BackgroundKnowledge, BKList),
     read_from_file(Examples, ExList),
     random_permutation(ExList, RndExL),	                        %re-order examples
     member(fold_x_v(Folds), Parameters),
-    member(validation_size(VSize),Parameters),
-    pre_process_data(Folds, VSize, RndExL, ExLists),
+    pre_process_data(Folds, Parameters, RndExL, ExLists),
     use_methods(Methods, Folds, Name, Head, Parameters, ExLists, BKList),!,
     process_data(Sets, Parameters, Methods).
+process_data([set(Name, csv, CsvParameters)|Sets], Parameters, Methods):-
+    member(filename(FileName), CsvParameters),
+    %read_csv_file_to_list(FileName, Name, CsvParameters, ExList),
+    csv_read_file(FileName, [First|ExList], CsvParameters),     %Firs hold meta info about data-set  	    
+    random_permutation(ExList, RndExL),	                        %re-order examples
+    member(fold_x_v(Folds), Parameters),
+    pre_process_data(Folds, Parameters, RndExL, ExLists),
+    member(y_cols(YCols), CsvParameters),
+    member(x_cols(XCols), CsvParameters),
+    use_methods(Methods, Folds, Name, First, [y_cols(YCols),x_cols(XCols)|Parameters], ExLists, no_bk),!,
+    process_data(Sets, Parameters, Methods).
+
+interpret_info(InfoList, Head, BackgroundKnowledge, Examples):-
+   member(background_head(Name/Arity), InfoList),
+   functor(Head, Name, Arity),
+   member(background_file(BackgroundKnowledge), InfoList),
+   member(example_file(Examples), InfoList).
 
 use_methods([], _, _, _, _, _, _).
 use_methods([Method|Methods], Folds, Name, Head, Parameters, ExLists, BKList):-
     do_experiment(Folds, Name, Head, Method, ExLists, BKList, Results),
-    open('Result', append, Stream),
+    open('Result_new', append, Stream),
     write_results(Results, Stream, Folds),
     close(Stream),
     retract_loop(Results, Head, BKList),!,
@@ -117,16 +159,35 @@ do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval):-
     do_experiment(NewFolds, Name, Head, Parameters, ExLists, BKList, RestEval),
     append(PartEval, RestEval, Eval).
 do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval):-
-    write(Folds), write(Name), write(Head), write(Parameters), write(ExLists), write(BKList), write(Eval),
+    write(Folds), write(Name), write(Head), write(Parameters), %write(ExLists), write(BKList), write(Eval),
     do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval).
+
+
+%CSV fix later
+%do_one_fold(TestFold, Name, Head, Method, ExLists, no_bk, Result):-
+%    TestFold \== 0,
+%    nth1(TestFold, ExLists, TestExList, TrainExList), 
+%    do_regression(Method, TrainExList, Model).
+    %Write these later
+    %clean_conditions(Rules, CleanCondRulesL),
+    %add_rule_id(CleanCondRulesL, RulesWId, NoConds, NoRules),
+    %post_process_regression(Name, Head, TestFold, Method, TestExList, TrainExList, BKList, ClassIndex, Keys, NoRules, NoConds, ClassT, RulesWId, Result).
 
 do_one_fold(TestFold, Name, Head, Method, ExLists, BKList, Result):-
     TestFold \== 0,
-    nth1(TestFold, ExLists, TestExList, TrainExList), 
-    do_induction(Method, Head, TrainExList, BKList, TestFold, ClassIndex, Keys, _RawInduction, _NoRules, ClassT, Rules),
-    clean_conditions(Rules, CleanCondRulesL),
+    nth1(TestFold, ExLists, TestExList, TrainExList),
     %trace,
-    add_rule_id(CleanCondRulesL, RulesWId, NoConds, NoRules),
+    do_induction(Method, Head, TrainExList, BKList, TestFold, ClassIndex, Keys, _RawInduction, NoRules1, ClassT, Rules),!,
+    clean_conditions(Rules, CleanCondRulesL),
+    add_rule_id(CleanCondRulesL, RulesWId, NoConds, NoRules1, NoRules),
+    post_process_rules(Name, Head, TestFold, Method, TestExList, TrainExList, BKList, ClassIndex, Keys, NoRules, NoConds, ClassT, RulesWId, Result).
+
+do_one_fold(TestFold, Name, Head, Method, ExLists, no_bk, Result):-
+    TestFold \== 0,
+    nth1(TestFold, ExLists, TestExList, TrainExList), 
+    do_regression(Method, Head, TrainExList, BKList, TestFold, ClassIndex, Keys, _RawInduction, _NoRules, ClassT, Rules),
+    clean_conditions(Rules, CleanCondRulesL),
+    add_rule_id(CleanCondRulesL, RulesWId, NoConds, _, NoRules),
     post_process_rules(Name, Head, TestFold, Method, TestExList, TrainExList, BKList, ClassIndex, Keys, NoRules, NoConds, ClassT, RulesWId, Result).
 
 post_process_rules(DataName, Head, TestFold, Method, TestExList, TrainExList, BKList, ClassIndex, Keys, NoRules, NoConds, ClassT, Rules, Result):-
@@ -154,7 +215,7 @@ post_process_rules(DataName, _Head, TestFold, Method, TestExList, TrainExList, _
      classify_rules(DataName, Method, TestExWIdList, ClassIndex, CClassTuples, Keys, NoRules, NoConds, Rules, PartResult),
      append(PartResult, IndexRes, Result).
 post_process_rules(DataName, _Head, _TestFold, Method,  TestExList, _TrainExList, _BKList, ClassIndex, Keys, NoRules, NoConds, ClassT, Rules, Result):-    
-     write('No post-processing'),nl,	
+     write('No post-processing'),nl,%trace,
      copy_term(ClassT, CClassTuples),	
      classify_rules(DataName, Method, TestExList, ClassIndex, CClassTuples,  Keys, NoRules, NoConds, Rules, Result).     	
 
@@ -172,6 +233,7 @@ classify_rules(DataName, Method, TestExList, ClassIndex, ClassTuples, Keys, NoRu
        member(list_classification, Settings),!,
        collect_conditions(Rules, ClassIndex, RulesList),
        statistics(runtime, _),
+       %trace,
        classify_rules_list(dac, TestExList, RulesList, ClassIndex, ClassTuples, ClassTuples, ClassDist, Res),
        statistics(runtime, [_,EnsEvalTime]),
        length(Res, ResL),
@@ -214,7 +276,6 @@ classify_rules(DataName, Method, TestExList, ClassIndex, ClassTuples, Keys, NoRu
        copy_term(ClassTuples, ClassTuples3),
        copy_term(ClassTuples, ClassTuples4),
        statistics(runtime, _),
-       %trace,
        classify_rules_list(sac, TestExList, Rules, ClassIndex, ClassTuples2, ClassTuples3, ClassDist, Res),
        statistics(runtime, [_,EnsEvalTime]),
        %check_ties(Res, NoTies),
@@ -247,7 +308,7 @@ classify_rules(DataName, Method, TestExList, ClassIndex, ClassTuples, Keys, NoRu
 %
 %classify_rules_list(sac, [TestEx|TestExs], Rules, ClassIndex, ClassTuples, TempCTup, FCTup, [PartRes|Res])
 classify_rules_list(_, [], _, _, _, ClassDist, ClassDist, []).
-classify_rules_list(Method, [(_ExId,TestEx)|TestExs], Rules, ClassIndex, ClassTuples, TempCTup, FCTup, [PartRes|Res]):-
+classify_rules_list(Method, [TestEx|TestExs], Rules, ClassIndex, ClassTuples, TempCTup, FCTup, [PartRes|Res]):-
     TestEx =..[F|Args],
     nth1(ClassIndex, Args, Class, Rest),
     nth1(ClassIndex, NewArgs, _, Rest),
@@ -255,21 +316,23 @@ classify_rules_list(Method, [(_ExId,TestEx)|TestExs], Rules, ClassIndex, ClassTu
     NewNo is No + 1,
     append([NewNo-Class], TCTup, NewTempCTup),    
     NTestEx =..[F|NewArgs],
+%trace,
     get_rules_votes1(Rules, Method, NTestEx, ClassIndex, Class-ClassTuples, PartRes, _RulesFiredList),!,
+    
     %write('Classifying Ex id: '), write(ExId), nl,
     %write('Class become is: '), write(PartRes),nl,
     %write('These rules fired: '),write(RulesFiredList), nl, 
     %nl,
     classify_rules_list(Method, TestExs, Rules, ClassIndex, ClassTuples, NewTempCTup, FCTup, Res).
-/*
-get_rules_votes1([], dac, _, _, C-CT, C-CT).
-get_rules_votes1([tree(TreeRules)|RestRules], dac, NTestEx, ClassIndex, Class-FClassTuples, Class-RSRes):-
+
+get_rules_votes1([], dac, _, _, C-CT, C-CT,[]).
+get_rules_votes1([tree(TreeRules)|RestRules], dac, NTestEx, ClassIndex, Class-FClassTuples, Class-RSRes, Dummy):-
     get_rules_votes(TreeRules, dac, NTestEx, ClassIndex, Class-FClassTuples, _-PartRes),       %One rule per tree! 
-    get_rules_votes1(RestRules, dac, NTestEx, ClassIndex, Class-FClassTuples, _-RestRes, RulesFiredList),
+    get_rules_votes1(RestRules, dac, NTestEx, ClassIndex, Class-FClassTuples, _-RestRes, Dummy),
     joint_dist(RestRes, PartRes, Res),
     keysort(Res, SRes),
     reverse(SRes, RSRes).
-*/
+
 get_rules_votes1([], sac, _, _, C-CT, C-CT, []).
 get_rules_votes1([rule_set(Rules)|Rest], sac, NTestEx, ClassIndex, Class-ClassTuples, Class-RSRes, FRulesFiredList):-
     get_rules_votes(Rules, sac, NTestEx, ClassIndex, Class-ClassTuples, _-PartRes, RuleIDL),
@@ -301,11 +364,7 @@ is_zero([]).
 is_zero([0-_|R]):-
 	is_zero(R).
 
-get_rules_votes([], _, _NTestEx, _ClassIndex, Class-ClassTuples, Class-RSClassT, []):-
-    sort(ClassTuples, SClassT),
-    reverse(SClassT, RSClassT).
-%Not fixed below for ID..
-/*
+%Not fixed for id
 get_rules_votes([Rule|Rules], dac, NTestEx, ClassIndex, TClass-ClassTuples, CTuples):-
     copy_term(ClassTuples, CClassTuples),	
     get_rule_vote(Rule, NTestEx, CClassTuples, ClassDist),
@@ -321,7 +380,10 @@ get_rules_votes([Rule|Rules], dac, NTestEx, ClassIndex, TClass-ClassTuples, CTup
       reverse(SNewClassTuples, RSNewClassTuples),
       CTuples = TClass-RSNewClassTuples
     ).
-*/ 
+
+get_rules_votes([], sac, _NTestEx, _ClassIndex, Class-ClassTuples, Class-RSClassT, []):-
+    sort(ClassTuples, SClassT),
+    reverse(SClassT, RSClassT).
 get_rules_votes([rule(Id, Conds, RDist)|Rules], sac, NTestEx, ClassIndex, TClass-ClassTuples, CTuples, FRulesIds):-          %try all rules!
     copy_term(ClassTuples, CClassTuples),	
     get_rule_vote(rule(Id, Conds, RDist), NTestEx, CClassTuples, ClassDist),
@@ -340,8 +402,10 @@ get_rules_votes([rule(Id, Conds, RDist)|Rules], sac, NTestEx, ClassIndex, TClass
     ).
 
 get_rule_vote(rule(_, [], _), _, TClassTuple, TClassTuple).                       %Ignore default rule
-get_rule_vote(rule(Id, Conds, Dist), Ex, TClassTuple, NewTClassTuple):-
+get_rule_vote(rule(Id, Conds, Dist), Ex, TClassTuple, NewTClassTuple):-%SAC
     update_dist(Conds, Id, Ex, Dist, TClassTuple, NewTClassTuple).
+get_rule_vote(rule(Conds, Dist), Ex, TClassTuple, NewTClassTuple):-    %DAC , no rule id...fix this       
+    update_dist(Conds, _Id, Ex, Dist, TClassTuple, NewTClassTuple).
 
 update_dist([], _Id, _Ex, Dist, TClassTuple, RSNewClassTuple):-
     %write('Rule with id: '),write(Id), write(' fired!'),nl,	
@@ -414,7 +478,7 @@ get_i_rules([rule_set(IRules)|RestR], FNoRules):-
     FNoRules is RestNoRules + PartNoRules.
     
 evaluate_index_rules([], _, _, _, ClassDist, ClassDist, []).
-evaluate_index_rules([(_Id,IEx)|IExs], IndexRules, ClassIndex, ClassTuple, TClassD, FClassD, [ExClass-EvalClass|PartEval]):-
+evaluate_index_rules([(_,IEx)|IExs], IndexRules, ClassIndex, ClassTuple, TClassD, FClassD, [ExClass-EvalClass|PartEval]):-
     %trace,	
     copy_term(ClassTuple, CClassTuple),
     IEx = ex_i(_)-Head,
@@ -726,14 +790,20 @@ get_votes(dac, [Key|Keys], TestEx, ClassIndex, TClass-ClassTuples, CTuples):-
     append([NewNo-Class], Rest, NewClassTuples),!,
     get_votes(dac, Keys, TestEx, ClassIndex, TClass-NewClassTuples, CTuples).
 
+%do_regression(Method, TrainExList, Model). fix this later
+%do_regression(single_model(Method, linear_regression), TrainExList, Model):-
+%    join_folds(TrainExLists, NewTrainExList),!,
+%    l_m(NewTrainExList, Method, Model).
+
+
 %do_induction(Method, Head, TrainExList, BKList, TestFold, ClassIndex, Keys, _RawInduction, NoRules, ClassT, Rules),
 do_induction(ensemble_model(Size, Parameters, dac), Head, TrainExLists, BKList, BBKey, ClassIndex, BBKeys, Trees, NoTrees, ClassT, Rules):-
-    join_folds(TrainExLists, NewTrainExList),!,
+    join_folds(TrainExLists, NewTrainExList),!,%trace,
     %create_bag(TrainExList, NewTrainExList),!,
     do_trees(Size, Parameters, Head, NewTrainExList, BKList, BBKey, ClassIndex, _, ClassT, BBKeys, Trees, NoTrees, Rules).
 
 do_induction(single_model(Parameters, dac), Head, TrainExLists, BKList, BBKey, ClassIndex, BBKeys, Trees, NoTrees, ClassT, Rules):-
-    join_folds(TrainExLists, NewTrainExList),!,
+    join_folds(TrainExLists, NewTrainExList),!,%trace,
     do_trees(1, Parameters, Head, NewTrainExList, BKList, BBKey, ClassIndex, _, ClassT, BBKeys, Trees, NoTrees, Rules).
 
 do_induction(ensemble_model(Size, Parameters, sac), Head, TrainExLists, BKList, BBKey, ClassIndex, BBKeys, Trees, NoTrees, ClassT, Rules):-
@@ -1076,12 +1146,16 @@ loop_write(N,[_F|R]):-
     NewN is N + 1,
     loop_write(NewN,R).
 
-pre_process_data(N, VSize, ExList, ExLists):- %, ValExList):-
+pre_process_data(N, Params, ExList, ExLists):- %, ValExList):-
     length(ExList, NoEx),
     ExPerFold is round(NoEx / N),
-    NoValPerFold is round(ExPerFold * VSize),
+    (member(validation_size(VSize),Params) ->
+      NoValPerFold is round(ExPerFold * VSize)
+     ;
+     NoValPerFold is 0
+    ),
     NewExPerFold is ExPerFold - NoValPerFold,
-    rnd_fold_gen(N, ExList, NewExPerFold, NoValPerFold, NoEx, ExLists). %, ValExList).
+    rnd_fold_gen(N, ExList, NewExPerFold, _NoValPerFold, NoEx, ExLists). %, ValExList).
 
 rnd_fold_gen(0, [], _ExPerFold, _NoValPerFold, _NoEx, []). %, []).
 rnd_fold_gen(0, _ExLeft, _, _, _, []). %, []). % throw example away!, fix better solution later
@@ -1117,17 +1191,17 @@ read_loop(X,[X|R]):-
     read_loop(NewX,R).
 
 %Could/should be done in conjuntion w induction...
-add_rule_id(RuleSets, RulesWId, NoConds, NoRules):-
-    add_rule_id(RuleSets, 0, RulesWId, NoConds, NoRules).
+add_rule_id([tree(Tree)|Trees],[tree(Tree)|Trees], _NoConds, NoRules, NoRules).
+add_rule_id(RuleSets, RulesWId, NoConds, _, NoRules):-
+    add_rule_id1(RuleSets, 0, RulesWId, NoConds, NoRules).
 
-add_rule_id([], _, [], 0, 0).
-add_rule_id([rule_set(Rules)|RuleSets], RuleSetId, [rule_set(PartRulesWId)|RestRulesWId], FConds, FNoRules):-
+add_rule_id1([], _, [], 0, 0).
+add_rule_id1([rule_set(Rules)|RuleSets], RuleSetId, [rule_set(PartRulesWId)|RestRulesWId], FConds, FNoRules):-
     NRuleSetId is RuleSetId + 1,
     add_r_id(Rules, NRuleSetId, 1, PartRulesWId, PartConds, PartNoRules),	   
-    add_rule_id(RuleSets, NRuleSetId, RestRulesWId, RestConds, RestNoRules),
+    add_rule_id1(RuleSets, NRuleSetId, RestRulesWId, RestConds, RestNoRules),
     FConds is PartConds + RestConds,
     FNoRules is PartNoRules + RestNoRules.
-
 add_r_id([], _, _, [], 0, 0).
 add_r_id([rule(Cond, Dist)|Rules], NRuleSetId, RuleId, [rule(NRuleSetId-RuleId, Cond, Dist)|RulesWId], FAccConds, FNoRules):-
     NewRuleId is RuleId + 1,
@@ -1142,6 +1216,99 @@ add_e_id([], _, []).
 add_e_id([Ex|Exs], Id, [(Id, Ex)|ExWId]):-
    NewId is Id + 1,	
    add_e_id(Exs, NewId, ExWId).
+
+%%
+% fill the predTuple list with values
+read_csv_file_to_list(FileName, Name, CsvParameters, ExList):-
+  open(FileName, read, Stream),
+  %trace,
+  handle_input(Stream, 1, Name, CsvParameters, ExList),
+  close(Stream).
+  
+handle_input(Stream, Line, Name, CsvParameters, PredTuple):-
+  member(ignore_row(RowList), CsvParameters),
+  member(Line, RowList),!,
+  read_line_to_codes(Stream, LineOfCodes),
+  (LineOfCodes == end_of_file ->
+    !
+  ;
+    NewLine is Line + 1,
+    handle_input(Stream, NewLine, Name, CsvParameters, PredTuple)
+  ).
+handle_input(Stream, Line, Name, CsvParameters, PredTuple):-
+  read_line_to_codes(Stream, LineOfCodes),
+  (LineOfCodes == end_of_file ->
+    !
+  ;
+    NewLine is Line + 1,
+    member(ignore_col(IgCols), CsvParameters),
+    member(x_cols(XCols), CsvParameters),
+    member(y_cols(YCols), CsvParameters),
+    length(XCols, NoXs),
+    length(YCols, NoYs),
+    Args is NoXs + NoYs,
+    functor(PredTuple, Name, Args), 
+    handle_line(LineOfCodes, 1, IgCols, XCols, YCols, PredTuple),
+    handle_input(Stream, NewLine, Name, CsvParameters, PredTuple)
+  ).
+
+%End of the line...
+handle_line([], _, _, _, _, _).
+%Ignore this column
+handle_line(LineOfCodes, Col, IgCol, XCol, YCol, PredTuple):-
+  member(Col, IgCol),!,
+  get_col(LineOfCodes, _, RestOfCodes),
+  NewCol is Col + 1,
+  handle_line(RestOfCodes, NewCol, IgCol, XCol, YCol, PredTuple).
+%Add this column as x (input)
+handle_line(LineOfCodes, Col, IgCol, XCol, YCol, PredTuple):-
+  member(Col, XCol),!,
+  length(IgCol, RemovedCols),
+  get_col(LineOfCodes, ColumnValue, RestOfCodes),
+  Arg is Col - RemovedCols,  
+  arg(Arg, PredTuple, ColumnValue),
+  NewCol is Col + 1,
+  handle_line(RestOfCodes, NewCol, IgCol, XCol, YCol, PredTuple).
+%Add this column as y (output)
+handle_line(LineOfCodes, Col, IgCol, XCol, YCol, PredTuple):-
+  member(Col, YCol),!,
+  length(IgCol, RemovedCols),
+  get_col(LineOfCodes, ColumnValue, RestOfCodes),
+  Arg is Col - RemovedCols,  
+  arg(Arg, PredTuple, ColumnValue),
+  NewCol is Col + 1,
+  handle_line(RestOfCodes, NewCol, IgCol, XCol, YCol, PredTuple). 
+  
+
+get_col(Codes, Value, RestOfCodes):-
+  get_number(Codes, RestOfCodes, Value).
+get_col(Codes, Value, RestOfCodes):-
+  get_atom(Codes, RestOfCodes, Value).	
+
+%first try to get into a number
+get_number(Codes, RestOfCodes, Value):-
+  get_numberC(Codes, NumberCodes, RestOfCodes),
+  number_codes(Value, NumberCodes).
+
+get_numberC([Code|RestOfCodes], [], RestOfCodes):-
+  char_code(',', Code),!.	%Stop at ','
+get_numberC([Code|RestOfCodes], NumberCodes, RestOfCodes):-
+  char_code(' ', Code),!,	%remove if we have blank junk
+  get_numberC(RestOfCodes, NumberCodes, RestOfCodes).
+get_numberC([Code|Codes], [Code|NumberCodes], RestOfCodes):-
+  get_numberC(Codes, NumberCodes, RestOfCodes).
+
+%else get it as an atom
+get_atom(Codes, RestOfCodes, Value):-
+  get_atomC(Codes, AtomCodes, RestOfCodes),
+  atom_codes(Value, AtomCodes).
+
+get_atomC([Code|RestOfCodes], [], RestOfCodes):-
+  char_code(',', Code).
+get_atomC([Code|Codes], [Code|AtomCodes], RestOfCodes):-
+  get_atomC(Codes, AtomCodes, RestOfCodes).
+
+
 
 :- setup.
 

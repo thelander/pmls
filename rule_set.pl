@@ -10,13 +10,12 @@
 
 rule_set(TrainExList, BKList, Parameters, Head, BBKey, ClassIndex, ClassTupleC, RoughRuleSet, CHead):-
     %write('Starting to build rule set...'),nl,
-	%trace,
     assert_bb(BKList,BBKey), %assert background knowledge, used when building the tree
     feature_data_type(Head, BBKey, FeatureDTList),
     member(classification, Parameters),
     count_classes(TrainExList, BBKey, FeatureDTList, ClassIndex, ClassTupleC, ClassList),!,
-    %create_class_tuples(BBKey, ClassT),
-    %copy_term(ClassT, ClassTupleC),
+    create_class_tuples(BBKey, ClassT),
+    copy_term(ClassT, ClassTupleC),
     build_rule_set(TrainExList, ClassList, BBKey, Parameters, FeatureDTList, ClassIndex, ClassTupleC, RoughRuleSet),
     %write('finished building rule set...cleaning up..'),nl,
     retract_bb([Head], BBKey),
@@ -86,7 +85,7 @@ build_rule(TrainExList, ClassList, Conditions, FeatureDTList, BBKey, Parameters,
     ).
 
 %%	This baby should call build tree, be sure to add all children to
-%	the tree...
+%	the tree...fix a stopping criterion at build tree as well...
 select_value(FeatureRanking, Param, ClassIndex, F, List, Op):- 
         (member(rnd_feature(yes), Param) ->
            length(FeatureRanking, FLength),

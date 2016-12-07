@@ -1,0 +1,2275 @@
+
+
+
+================================
+Data set: glass
+Method: tree
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4.8
+Accuracy: 0.9363636363636364
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: ensemble
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 369.2
+Accuracy: 0.9454545454545454
+Time to classify test set: 94
+
+
+
+================================
+Data set: glass
+Method: rnd_uniform
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.6
+Accuracy: 0.9272727272727272
+Time to classify test set: 15
+
+
+
+================================
+Data set: glass
+Method: rnd_uniform
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7.9
+Accuracy: 0.9545454545454546
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: rnd_uniform
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8.3
+Accuracy: 0.9454545454545454
+Time to classify test set: 16
+
+
+
+================================
+Data set: glass
+Method: rnd_uniform
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 12.1
+Accuracy: 0.9181818181818182
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: rnd_uniform
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 13.2
+Accuracy: 0.9363636363636364
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: rnd_uniform
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 17.2
+Accuracy: 0.9454545454545454
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: rnd_uniform
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 27.0
+Accuracy: 0.9454545454545454
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: rnd_uniform
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 36.3
+Accuracy: 0.9454545454545454
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: rnd_uniform
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 33.9
+Accuracy: 0.9454545454545454
+Time to classify test set: 16
+
+
+
+================================
+Data set: glass
+Method: mbs
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4.2
+Accuracy: 0.9454545454545454
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: mbs
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4.5
+Accuracy: 0.9454545454545454
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: mbs
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4.5
+Accuracy: 0.9454545454545454
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: mbs
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4.3
+Accuracy: 0.9272727272727272
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: mbs
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4.7
+Accuracy: 0.9363636363636364
+Time to classify test set: 16
+
+
+
+================================
+Data set: glass
+Method: mbs
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.0
+Accuracy: 0.9454545454545454
+Time to classify test set: 16
+
+
+
+================================
+Data set: glass
+Method: mbs
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.1
+Accuracy: 0.9363636363636364
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: mbs
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.8
+Accuracy: 0.9363636363636364
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: mbs
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8.0
+Accuracy: 0.9545454545454546
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: munge
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.0
+Accuracy: 0.9272727272727272
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: munge
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.1
+Accuracy: 0.9272727272727272
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: munge
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.2
+Accuracy: 0.9090909090909091
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: munge
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4.9
+Accuracy: 0.9363636363636364
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: munge
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.7
+Accuracy: 0.9272727272727272
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: munge
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4.7
+Accuracy: 0.9272727272727272
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: munge
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4.4
+Accuracy: 0.9272727272727272
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: munge
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4.5
+Accuracy: 0.9181818181818182
+Time to classify test set: 0
+
+
+
+================================
+Data set: glass
+Method: munge
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.1
+Accuracy: 0.9363636363636364
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: tree
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4.8
+Accuracy: 0.9533333333333334
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: ensemble
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 436.4
+Accuracy: 0.9666666666666667
+Time to classify test set: 111
+
+
+
+================================
+Data set: iris
+Method: rnd_uniform
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.4
+Accuracy: 0.9533333333333334
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: rnd_uniform
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.2
+Accuracy: 0.9533333333333334
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: rnd_uniform
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.6
+Accuracy: 0.9533333333333334
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: rnd_uniform
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 6.1
+Accuracy: 0.96
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: rnd_uniform
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.5
+Accuracy: 0.9533333333333334
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: rnd_uniform
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 6.3
+Accuracy: 0.96
+Time to classify test set: 16
+
+
+
+================================
+Data set: iris
+Method: rnd_uniform
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 6.4
+Accuracy: 0.96
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: rnd_uniform
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 6.8
+Accuracy: 0.96
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: rnd_uniform
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7.7
+Accuracy: 0.96
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: mbs
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.3
+Accuracy: 0.9533333333333334
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: mbs
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.8
+Accuracy: 0.9533333333333334
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: mbs
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.5
+Accuracy: 0.9533333333333334
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: mbs
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.8
+Accuracy: 0.9466666666666667
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: mbs
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 6.5
+Accuracy: 0.9533333333333334
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: mbs
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7.0
+Accuracy: 0.96
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: mbs
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8.5
+Accuracy: 0.96
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: mbs
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 9.5
+Accuracy: 0.9533333333333334
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: mbs
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 13.0
+Accuracy: 0.9533333333333334
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: munge
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 6.3
+Accuracy: 0.9466666666666667
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: munge
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 6.8
+Accuracy: 0.9666666666666667
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: munge
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.2
+Accuracy: 0.9333333333333333
+Time to classify test set: 16
+
+
+
+================================
+Data set: iris
+Method: munge
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.9
+Accuracy: 0.9533333333333334
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: munge
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 6.4
+Accuracy: 0.96
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: munge
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 6.7
+Accuracy: 0.9533333333333334
+Time to classify test set: 0
+
+
+
+================================
+Data set: iris
+Method: munge
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.9
+Accuracy: 0.9533333333333334
+Time to classify test set: 15
+
+
+
+================================
+Data set: iris
+Method: munge
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.7
+Accuracy: 0.94
+Time to classify test set: 16
+
+
+
+================================
+Data set: iris
+Method: munge
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.7
+Accuracy: 0.9466666666666667
+Time to classify test set: 0
+
+
+
+================================
+Data set: thyroid
+Method: tree
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 6.0
+Accuracy: 0.9302325581395349
+Time to classify test set: 0
+
+
+
+================================
+Data set: thyroid
+Method: ensemble
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 478.8
+Accuracy: 0.9441860465116279
+Time to classify test set: 187
+
+
+
+================================
+Data set: thyroid
+Method: rnd_uniform
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.7
+Accuracy: 0.9255813953488372
+Time to classify test set: 0
+
+
+
+================================
+Data set: thyroid
+Method: rnd_uniform
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 6.0
+Accuracy: 0.9395348837209302
+Time to classify test set: 0
+
+
+
+================================
+Data set: thyroid
+Method: rnd_uniform
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.9
+Accuracy: 0.9395348837209302
+Time to classify test set: 16
+
+
+
+================================
+Data set: thyroid
+Method: rnd_uniform
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.7
+Accuracy: 0.9116279069767442
+Time to classify test set: 0
+
+
+
+================================
+Data set: thyroid
+Method: rnd_uniform
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.0
+Accuracy: 0.8511627906976744
+Time to classify test set: 15
+
+
+
+================================
+Data set: thyroid
+Method: rnd_uniform
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4.0
+Accuracy: 0.8186046511627907
+Time to classify test set: 0
+
+
+
+================================
+Data set: thyroid
+Method: rnd_uniform
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.4
+Accuracy: 0.8186046511627907
+Time to classify test set: 16
+
+
+
+================================
+Data set: thyroid
+Method: rnd_uniform
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 3.8
+Accuracy: 0.8186046511627907
+Time to classify test set: 0
+
+
+
+================================
+Data set: thyroid
+Method: rnd_uniform
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.6
+Accuracy: 0.8186046511627907
+Time to classify test set: 16
+
+
+
+================================
+Data set: thyroid
+Method: mbs
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 6.7
+Accuracy: 0.9255813953488372
+Time to classify test set: 0
+
+
+
+================================
+Data set: thyroid
+Method: mbs
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7.4
+Accuracy: 0.9302325581395349
+Time to classify test set: 0
+
+
+
+================================
+Data set: thyroid
+Method: mbs
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7.7
+Accuracy: 0.9209302325581395
+Time to classify test set: 32
+
+
+
+================================
+Data set: thyroid
+Method: mbs
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8.3
+Accuracy: 0.9302325581395349
+Time to classify test set: 0
+
+
+
+================================
+Data set: thyroid
+Method: mbs
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7.5
+Accuracy: 0.9302325581395349
+Time to classify test set: 0
+
+
+
+================================
+Data set: thyroid
+Method: mbs
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 10.6
+Accuracy: 0.9302325581395349
+Time to classify test set: 0
+
+
+
+================================
+Data set: thyroid
+Method: mbs
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 10.1
+Accuracy: 0.9302325581395349
+Time to classify test set: 15
+
+
+
+================================
+Data set: thyroid
+Method: mbs
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 13.0
+Accuracy: 0.9348837209302325
+Time to classify test set: 16
+
+
+
+================================
+Data set: thyroid
+Method: mbs
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 13.1
+Accuracy: 0.9255813953488372
+Time to classify test set: 0
+
+
+
+================================
+Data set: thyroid
+Method: munge
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 3.7
+Accuracy: 0.9302325581395349
+Time to classify test set: 0
+
+
+
+================================
+Data set: thyroid
+Method: munge
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4.7
+Accuracy: 0.9441860465116279
+Time to classify test set: 0
+
+
+
+================================
+Data set: thyroid
+Method: munge
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 6.5
+Accuracy: 0.9302325581395349
+Time to classify test set: 0
+
+
+
+================================
+Data set: thyroid
+Method: munge
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 6.6
+Accuracy: 0.9302325581395349
+Time to classify test set: 0
+
+
+
+================================
+Data set: thyroid
+Method: munge
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 6.1
+Accuracy: 0.9302325581395349
+Time to classify test set: 0
+
+
+
+================================
+Data set: thyroid
+Method: munge
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 6.3
+Accuracy: 0.9348837209302325
+Time to classify test set: 0
+
+
+
+================================
+Data set: thyroid
+Method: munge
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 6.0
+Accuracy: 0.9302325581395349
+Time to classify test set: 0
+
+
+
+================================
+Data set: thyroid
+Method: munge
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 6.6
+Accuracy: 0.9395348837209302
+Time to classify test set: 0
+
+
+
+================================
+Data set: thyroid
+Method: munge
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 6.9
+Accuracy: 0.9441860465116279
+Time to classify test set: 15
+
+
+
+================================
+Data set: wine
+Method: tree
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 5.1
+Accuracy: 0.9382022471910112
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: ensemble
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 506.1
+Accuracy: 0.9606741573033708
+Time to classify test set: 171
+
+
+
+================================
+Data set: wine
+Method: rnd_uniform
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 9.8
+Accuracy: 0.949438202247191
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: rnd_uniform
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 12.4
+Accuracy: 0.9438202247191011
+Time to classify test set: 16
+
+
+
+================================
+Data set: wine
+Method: rnd_uniform
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 13.0
+Accuracy: 0.9325842696629213
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: rnd_uniform
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 13.2
+Accuracy: 0.9382022471910112
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: rnd_uniform
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 14.2
+Accuracy: 0.9382022471910112
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: rnd_uniform
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 17.9
+Accuracy: 0.9325842696629213
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: rnd_uniform
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 21.3
+Accuracy: 0.9382022471910112
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: rnd_uniform
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 21.6
+Accuracy: 0.9382022471910112
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: rnd_uniform
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 30.0
+Accuracy: 0.9325842696629213
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: mbs
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8.1
+Accuracy: 0.9325842696629213
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: mbs
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 10.5
+Accuracy: 0.9157303370786517
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: mbs
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 10.1
+Accuracy: 0.9382022471910112
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: mbs
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 9.2
+Accuracy: 0.9438202247191011
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: mbs
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 11.3
+Accuracy: 0.9382022471910112
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: mbs
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 13.9
+Accuracy: 0.9325842696629213
+Time to classify test set: 15
+
+
+
+================================
+Data set: wine
+Method: mbs
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 14.6
+Accuracy: 0.9382022471910112
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: mbs
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 15.1
+Accuracy: 0.9382022471910112
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: mbs
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 14.0
+Accuracy: 0.9382022471910112
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: munge
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7.3
+Accuracy: 0.9213483146067416
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: munge
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8.1
+Accuracy: 0.9157303370786517
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: munge
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8.4
+Accuracy: 0.9269662921348315
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: munge
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7.8
+Accuracy: 0.9550561797752809
+Time to classify test set: 15
+
+
+
+================================
+Data set: wine
+Method: munge
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8.0
+Accuracy: 0.9325842696629213
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: munge
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 8.9
+Accuracy: 0.9325842696629213
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: munge
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7.6
+Accuracy: 0.9325842696629213
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: munge
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7.2
+Accuracy: 0.9438202247191011
+Time to classify test set: 0
+
+
+
+================================
+Data set: wine
+Method: munge
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 7.6
+Accuracy: 0.9438202247191011
+Time to classify test set: 0
+
+
+
+================================
+Data set: image_segmentation
+Method: tree
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 13.5
+Accuracy: 0.8516746411483254
+Time to classify test set: 0
+
+
+
+================================
+Data set: image_segmentation
+Method: ensemble
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 1219.3
+Accuracy: 0.8947368421052632
+Time to classify test set: 344
+
+
+
+================================
+Data set: image_segmentation
+Method: rnd_uniform
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 16.9
+Accuracy: 0.8755980861244019
+Time to classify test set: 32
+
+
+
+================================
+Data set: image_segmentation
+Method: rnd_uniform
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 21.0
+Accuracy: 0.8755980861244019
+Time to classify test set: 15
+
+
+
+================================
+Data set: image_segmentation
+Method: rnd_uniform
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 25.9
+Accuracy: 0.8755980861244019
+Time to classify test set: 0
+
+
+
+================================
+Data set: image_segmentation
+Method: rnd_uniform
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 30.2
+Accuracy: 0.8564593301435407
+Time to classify test set: 32
+
+
+
+================================
+Data set: image_segmentation
+Method: rnd_uniform
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 36.7
+Accuracy: 0.8516746411483254
+Time to classify test set: 0
+
+
+
+================================
+Data set: image_segmentation
+Method: rnd_uniform
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 55.8
+Accuracy: 0.84688995215311
+Time to classify test set: 0
+
+
+
+================================
+Data set: image_segmentation
+Method: rnd_uniform
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 85.0
+Accuracy: 0.8660287081339713
+Time to classify test set: 0
+
+
+
+================================
+Data set: image_segmentation
+Method: rnd_uniform
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 102.4
+Accuracy: 0.861244019138756
+Time to classify test set: 15
+
+
+
+================================
+Data set: image_segmentation
+Method: rnd_uniform
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 128.7
+Accuracy: 0.8516746411483254
+Time to classify test set: 31
+
+
+
+================================
+Data set: image_segmentation
+Method: mbs
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 16.8
+Accuracy: 0.8564593301435407
+Time to classify test set: 15
+
+
+
+================================
+Data set: image_segmentation
+Method: mbs
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 21.5
+Accuracy: 0.861244019138756
+Time to classify test set: 15
+
+
+
+================================
+Data set: image_segmentation
+Method: mbs
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29.7
+Accuracy: 0.8660287081339713
+Time to classify test set: 16
+
+
+
+================================
+Data set: image_segmentation
+Method: mbs
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 37.8
+Accuracy: 0.8995215311004785
+Time to classify test set: 16
+
+
+
+================================
+Data set: image_segmentation
+Method: mbs
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 42.0
+Accuracy: 0.8803827751196173
+Time to classify test set: 0
+
+
+
+================================
+Data set: image_segmentation
+Method: mbs
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 73.7
+Accuracy: 0.8660287081339713
+Time to classify test set: 30
+
+
+
+================================
+Data set: image_segmentation
+Method: mbs
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 110.4
+Accuracy: 0.8755980861244019
+Time to classify test set: 31
+
+
+
+================================
+Data set: image_segmentation
+Method: mbs
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 143.6
+Accuracy: 0.8803827751196173
+Time to classify test set: 31
+
+
+
+================================
+Data set: image_segmentation
+Method: mbs
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 174.3
+Accuracy: 0.8851674641148325
+Time to classify test set: 31
+
+
+
+================================
+Data set: image_segmentation
+Method: munge
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 13.2
+Accuracy: 0.8755980861244019
+Time to classify test set: 0
+
+
+
+================================
+Data set: image_segmentation
+Method: munge
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 14.4
+Accuracy: 0.8755980861244019
+Time to classify test set: 0
+
+
+
+================================
+Data set: image_segmentation
+Method: munge
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 15.8
+Accuracy: 0.8995215311004785
+Time to classify test set: 0
+
+
+
+================================
+Data set: image_segmentation
+Method: munge
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 16.0
+Accuracy: 0.8851674641148325
+Time to classify test set: 0
+
+
+
+================================
+Data set: image_segmentation
+Method: munge
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 16.3
+Accuracy: 0.8899521531100478
+Time to classify test set: 0
+
+
+
+================================
+Data set: image_segmentation
+Method: munge
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 17.3
+Accuracy: 0.8851674641148325
+Time to classify test set: 16
+
+
+
+================================
+Data set: image_segmentation
+Method: munge
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 18.6
+Accuracy: 0.9090909090909091
+Time to classify test set: 0
+
+
+
+================================
+Data set: image_segmentation
+Method: munge
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 19.1
+Accuracy: 0.8899521531100478
+Time to classify test set: 0
+
+
+
+================================
+Data set: image_segmentation
+Method: munge
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 20.6
+Accuracy: 0.9043062200956937
+Time to classify test set: 0
+
+
+
+================================
+Data set: spectf
+Method: tree
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 24.8
+Accuracy: 0.8853868194842407
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: tree
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 14.9
+Accuracy: 0.6628571428571428
+Time to classify test set: 16
+
+
+
+================================
+Data set: ionosphere
+Method: ensemble
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 1028.8
+Accuracy: 0.74
+Time to classify test set: 562
+
+
+
+================================
+Data set: ionosphere
+Method: rnd_uniform
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 20.6
+Accuracy: 0.7257142857142858
+Time to classify test set: 16
+
+
+
+================================
+Data set: ionosphere
+Method: rnd_uniform
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 25.0
+Accuracy: 0.7371428571428571
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: rnd_uniform
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 30.7
+Accuracy: 0.72
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: rnd_uniform
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 37.4
+Accuracy: 0.7
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: rnd_uniform
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 41.1
+Accuracy: 0.7371428571428571
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: rnd_uniform
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 70.1
+Accuracy: 0.74
+Time to classify test set: 15
+
+
+
+================================
+Data set: ionosphere
+Method: rnd_uniform
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 107.1
+Accuracy: 0.8142857142857143
+Time to classify test set: 31
+
+
+
+================================
+Data set: ionosphere
+Method: rnd_uniform
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 143.5
+Accuracy: 0.8228571428571428
+Time to classify test set: 46
+
+
+
+================================
+Data set: ionosphere
+Method: rnd_uniform
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 185.3
+Accuracy: 0.8228571428571428
+Time to classify test set: 46
+
+
+
+================================
+Data set: ionosphere
+Method: mbs
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 24.0
+Accuracy: 0.7914285714285715
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: mbs
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 34.0
+Accuracy: 0.8228571428571428
+Time to classify test set: 15
+
+
+
+================================
+Data set: ionosphere
+Method: mbs
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 45.0
+Accuracy: 0.7571428571428571
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: mbs
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 53.9
+Accuracy: 0.7714285714285715
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: mbs
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 62.6
+Accuracy: 0.7485714285714286
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: mbs
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 113.8
+Accuracy: 0.7371428571428571
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: mbs
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 187.8
+Accuracy: 0.7514285714285714
+Time to classify test set: 46
+
+
+
+================================
+Data set: ionosphere
+Method: mbs
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 261.8
+Accuracy: 0.7657142857142857
+Time to classify test set: 48
+
+
+
+================================
+Data set: ionosphere
+Method: mbs
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 321.2
+Accuracy: 0.7371428571428571
+Time to classify test set: 32
+
+
+
+================================
+Data set: ionosphere
+Method: munge
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 27.6
+Accuracy: 0.7657142857142857
+Time to classify test set: 15
+
+
+
+================================
+Data set: ionosphere
+Method: munge
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 41.9
+Accuracy: 0.8114285714285714
+Time to classify test set: 16
+
+
+
+================================
+Data set: ionosphere
+Method: munge
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 63.2
+Accuracy: 0.7257142857142858
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: munge
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 82.4
+Accuracy: 0.72
+Time to classify test set: 31
+
+
+
+================================
+Data set: ionosphere
+Method: munge
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 87.2
+Accuracy: 0.7342857142857143
+Time to classify test set: 16
+
+
+
+================================
+Data set: ionosphere
+Method: munge
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 150.6
+Accuracy: 0.7028571428571428
+Time to classify test set: 31
+
+
+
+================================
+Data set: ionosphere
+Method: munge
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 153.7
+Accuracy: 0.7085714285714285
+Time to classify test set: 15
+
+
+
+================================
+Data set: ionosphere
+Method: munge
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 79.5
+Accuracy: 0.7114285714285714
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: munge
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 68.3
+Accuracy: 0.7228571428571429
+Time to classify test set: 31

@@ -1,0 +1,2650 @@
+================================
+Data set: breast_cancer_wisconsin
+Method: tree
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 13.9
+Accuracy: 0.9470672389127325
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: ensemble
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 1020.3
+Accuracy: 0.9527896995708155
+Time to classify test set: 218
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: rnd_uniform
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 20.0
+Accuracy: 0.9113018597997139
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: rnd_uniform
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 21.1
+Accuracy: 0.9070100143061517
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: rnd_uniform
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 17.9
+Accuracy: 0.9184549356223176
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: rnd_uniform
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 17.7
+Accuracy: 0.9113018597997139
+Time to classify test set: 16
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: rnd_uniform
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 17.9
+Accuracy: 0.9113018597997139
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: rnd_uniform
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 19.9
+Accuracy: 0.9084406294706724
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: rnd_uniform
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 22.1
+Accuracy: 0.9084406294706724
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: rnd_uniform
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 24.5
+Accuracy: 0.9098712446351931
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: rnd_uniform
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 25.6
+Accuracy: 0.9084406294706724
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: mbs
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 16.9
+Accuracy: 0.9413447782546495
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: mbs
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 24.4
+Accuracy: 0.9370529327610873
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: mbs
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 27.3
+Accuracy: 0.9470672389127325
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: mbs
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 27.1
+Accuracy: 0.9470672389127325
+Time to classify test set: 16
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: mbs
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 27.8
+Accuracy: 0.9470672389127325
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: mbs
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 35.0
+Accuracy: 0.9456366237482118
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: mbs
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 47.0
+Accuracy: 0.9484978540772532
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: mbs
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 51.9
+Accuracy: 0.9513590844062947
+Time to classify test set: 16
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: mbs
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 63.6
+Accuracy: 0.9484978540772532
+Time to classify test set: 15
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: munge
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 16.2
+Accuracy: 0.9413447782546495
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: munge
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 18.8
+Accuracy: 0.9484978540772532
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: munge
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 17.0
+Accuracy: 0.932761087267525
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: munge
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 16.7
+Accuracy: 0.9370529327610873
+Time to classify test set: 15
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: munge
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 16.8
+Accuracy: 0.9384835479256081
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: munge
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 25.0
+Accuracy: 0.9399141630901288
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: munge
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 29.9
+Accuracy: 0.944206008583691
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: munge
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 40.7
+Accuracy: 0.9470672389127325
+Time to classify test set: 0
+
+
+
+================================
+Data set: breast_cancer_wisconsin
+Method: munge
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 39.2
+Accuracy: 0.9413447782546495
+Time to classify test set: 16
+
+
+
+================================
+Data set: bupa
+Method: tree
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 55.6
+Accuracy: 0.6260869565217392
+Time to classify test set: 0
+
+
+
+================================
+Data set: bupa
+Method: ensemble
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 3887.9
+Accuracy: 0.7188405797101449
+Time to classify test set: 360
+
+
+
+================================
+Data set: bupa
+Method: rnd_uniform
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 65.0
+Accuracy: 0.5942028985507246
+Time to classify test set: 0
+
+
+
+================================
+Data set: bupa
+Method: rnd_uniform
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 73.0
+Accuracy: 0.5623188405797102
+Time to classify test set: 0
+
+
+
+================================
+Data set: bupa
+Method: rnd_uniform
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 82.3
+Accuracy: 0.5652173913043478
+Time to classify test set: 0
+
+
+
+================================
+Data set: bupa
+Method: rnd_uniform
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 89.0
+Accuracy: 0.6144927536231884
+Time to classify test set: 0
+
+
+
+================================
+Data set: bupa
+Method: rnd_uniform
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 97.5
+Accuracy: 0.5739130434782609
+Time to classify test set: 0
+
+
+
+================================
+Data set: bupa
+Method: rnd_uniform
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 133.9
+Accuracy: 0.6057971014492753
+Time to classify test set: 0
+
+
+
+================================
+Data set: bupa
+Method: rnd_uniform
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 177.2
+Accuracy: 0.6086956521739131
+Time to classify test set: 0
+
+
+
+================================
+Data set: bupa
+Method: rnd_uniform
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 205.3
+Accuracy: 0.6086956521739131
+Time to classify test set: 0
+
+
+
+================================
+Data set: bupa
+Method: rnd_uniform
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 240.0
+Accuracy: 0.6231884057971014
+Time to classify test set: 0
+
+
+
+================================
+Data set: bupa
+Method: mbs
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 65.3
+Accuracy: 0.6144927536231884
+Time to classify test set: 0
+
+
+
+================================
+Data set: bupa
+Method: mbs
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 77.0
+Accuracy: 0.6434782608695652
+Time to classify test set: 31
+
+
+
+================================
+Data set: bupa
+Method: mbs
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 93.0
+Accuracy: 0.6666666666666666
+Time to classify test set: 0
+
+
+
+================================
+Data set: bupa
+Method: mbs
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 104.1
+Accuracy: 0.6695652173913044
+Time to classify test set: 0
+
+
+
+================================
+Data set: bupa
+Method: mbs
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 111.9
+Accuracy: 0.6521739130434783
+Time to classify test set: 0
+
+
+
+================================
+Data set: bupa
+Method: mbs
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 163.8
+Accuracy: 0.7014492753623188
+Time to classify test set: 16
+
+
+
+================================
+Data set: bupa
+Method: mbs
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 222.2
+Accuracy: 0.6869565217391305
+Time to classify test set: 30
+
+
+
+================================
+Data set: bupa
+Method: mbs
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 281.8
+Accuracy: 0.6927536231884058
+Time to classify test set: 63
+
+
+
+================================
+Data set: bupa
+Method: mbs
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 331.2
+Accuracy: 0.7043478260869566
+Time to classify test set: 31
+
+
+
+================================
+Data set: bupa
+Method: munge
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 66.3
+Accuracy: 0.6231884057971014
+Time to classify test set: 16
+
+
+
+================================
+Data set: bupa
+Method: munge
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 87.4
+Accuracy: 0.6144927536231884
+Time to classify test set: 45
+
+
+
+================================
+Data set: bupa
+Method: munge
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 105.4
+Accuracy: 0.6086956521739131
+Time to classify test set: 15
+
+
+
+================================
+Data set: bupa
+Method: munge
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 129.8
+Accuracy: 0.6028985507246377
+Time to classify test set: 0
+
+
+
+================================
+Data set: bupa
+Method: munge
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 148.6
+Accuracy: 0.6492753623188405
+Time to classify test set: 0
+
+
+
+================================
+Data set: bupa
+Method: munge
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 234.8
+Accuracy: 0.6086956521739131
+Time to classify test set: 31
+
+
+
+================================
+Data set: bupa
+Method: munge
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 316.8
+Accuracy: 0.6347826086956522
+Time to classify test set: 60
+
+
+
+================================
+Data set: bupa
+Method: munge
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 373.7
+Accuracy: 0.6086956521739131
+Time to classify test set: 64
+
+
+
+================================
+Data set: bupa
+Method: munge
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 432.3
+Accuracy: 0.6405797101449275
+Time to classify test set: 46
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: tree
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 55.0
+Accuracy: 0.51
+Time to classify test set: 16
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: ensemble
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4140.2
+Accuracy: 0.56
+Time to classify test set: 265
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: rnd_uniform
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 65.8
+Accuracy: 0.49333333333333335
+Time to classify test set: 15
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: rnd_uniform
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 81.6
+Accuracy: 0.48333333333333334
+Time to classify test set: 0
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: rnd_uniform
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 103.4
+Accuracy: 0.5
+Time to classify test set: 16
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: rnd_uniform
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 123.3
+Accuracy: 0.53
+Time to classify test set: 0
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: rnd_uniform
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 144.2
+Accuracy: 0.54
+Time to classify test set: 15
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: rnd_uniform
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 255.0
+Accuracy: 0.5366666666666666
+Time to classify test set: 0
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: rnd_uniform
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 403.1
+Accuracy: 0.53
+Time to classify test set: 0
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: rnd_uniform
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 540.9
+Accuracy: 0.5366666666666666
+Time to classify test set: 31
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: rnd_uniform
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 677.9
+Accuracy: 0.5433333333333333
+Time to classify test set: 61
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: mbs
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 64.7
+Accuracy: 0.5166666666666667
+Time to classify test set: 15
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: mbs
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 76.7
+Accuracy: 0.54
+Time to classify test set: 0
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: mbs
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 95.9
+Accuracy: 0.54
+Time to classify test set: 15
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: mbs
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 108.4
+Accuracy: 0.5633333333333334
+Time to classify test set: 0
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: mbs
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 121.6
+Accuracy: 0.5533333333333333
+Time to classify test set: 0
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: mbs
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 208.3
+Accuracy: 0.5533333333333333
+Time to classify test set: 16
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: mbs
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 339.9
+Accuracy: 0.55
+Time to classify test set: 32
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: mbs
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 470.0
+Accuracy: 0.5566666666666666
+Time to classify test set: 16
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: mbs
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 588.5
+Accuracy: 0.5533333333333333
+Time to classify test set: 15
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: munge
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 63.2
+Accuracy: 0.53
+Time to classify test set: 0
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: munge
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 68.1
+Accuracy: 0.48
+Time to classify test set: 0
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: munge
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 77.8
+Accuracy: 0.47
+Time to classify test set: 0
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: munge
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 82.0
+Accuracy: 0.49
+Time to classify test set: 0
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: munge
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 83.5
+Accuracy: 0.5
+Time to classify test set: 0
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: munge
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 96.4
+Accuracy: 0.5
+Time to classify test set: 31
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: munge
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 105.1
+Accuracy: 0.5266666666666666
+Time to classify test set: 15
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: munge
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 105.9
+Accuracy: 0.5
+Time to classify test set: 16
+
+
+
+================================
+Data set: cleveland_heart_disease
+Method: munge
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 116.0
+Accuracy: 0.52
+Time to classify test set: 0
+
+
+================================
+Data set: haberman
+Method: tree
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 65.3
+Accuracy: 0.6535947712418301
+Time to classify test set: 0
+
+
+
+================================
+Data set: haberman
+Method: ensemble
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 4350.8
+Accuracy: 0.6797385620915033
+Time to classify test set: 312
+
+
+
+================================
+Data set: haberman
+Method: rnd_uniform
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 78.3
+Accuracy: 0.6241830065359477
+Time to classify test set: 31
+
+
+
+================================
+Data set: haberman
+Method: rnd_uniform
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 88.3
+Accuracy: 0.6830065359477124
+Time to classify test set: 0
+
+
+
+================================
+Data set: haberman
+Method: rnd_uniform
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 103.4
+Accuracy: 0.7058823529411765
+Time to classify test set: 0
+
+
+
+================================
+Data set: haberman
+Method: rnd_uniform
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 113.8
+Accuracy: 0.6830065359477124
+Time to classify test set: 0
+
+
+
+================================
+Data set: haberman
+Method: rnd_uniform
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 123.6
+Accuracy: 0.6797385620915033
+Time to classify test set: 0
+
+
+
+================================
+Data set: haberman
+Method: rnd_uniform
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 156.0
+Accuracy: 0.7058823529411765
+Time to classify test set: 0
+
+
+
+================================
+Data set: haberman
+Method: rnd_uniform
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 192.0
+Accuracy: 0.6830065359477124
+Time to classify test set: 0
+
+
+
+================================
+Data set: haberman
+Method: rnd_uniform
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 212.5
+Accuracy: 0.6830065359477124
+Time to classify test set: 16
+
+
+
+================================
+Data set: haberman
+Method: rnd_uniform
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 218.9
+Accuracy: 0.696078431372549
+Time to classify test set: 0
+
+
+
+================================
+Data set: haberman
+Method: mbs
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 77.4
+Accuracy: 0.7189542483660131
+Time to classify test set: 15
+
+
+
+================================
+Data set: haberman
+Method: mbs
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 87.5
+Accuracy: 0.7026143790849673
+Time to classify test set: 0
+
+
+
+================================
+Data set: haberman
+Method: mbs
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 97.2
+Accuracy: 0.7026143790849673
+Time to classify test set: 0
+
+
+
+================================
+Data set: haberman
+Method: mbs
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 104.1
+Accuracy: 0.7352941176470589
+Time to classify test set: 0
+
+
+
+================================
+Data set: haberman
+Method: mbs
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 111.5
+Accuracy: 0.7189542483660131
+Time to classify test set: 16
+
+
+
+================================
+Data set: haberman
+Method: mbs
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 146.7
+Accuracy: 0.696078431372549
+Time to classify test set: 0
+
+
+
+================================
+Data set: haberman
+Method: mbs
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 184.4
+Accuracy: 0.673202614379085
+Time to classify test set: 31
+
+
+
+================================
+Data set: haberman
+Method: mbs
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 225.7
+Accuracy: 0.6928104575163399
+Time to classify test set: 32
+
+
+
+================================
+Data set: haberman
+Method: mbs
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 229.1
+Accuracy: 0.696078431372549
+Time to classify test set: 0
+
+
+
+================================
+Data set: haberman
+Method: munge
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 76.5
+Accuracy: 0.5882352941176471
+Time to classify test set: 0
+
+
+
+================================
+Data set: haberman
+Method: munge
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 86.2
+Accuracy: 0.7189542483660131
+Time to classify test set: 0
+
+
+
+================================
+Data set: haberman
+Method: munge
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 98.4
+Accuracy: 0.6666666666666666
+Time to classify test set: 0
+
+
+
+================================
+Data set: haberman
+Method: munge
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 111.0
+Accuracy: 0.696078431372549
+Time to classify test set: 0
+
+
+
+================================
+Data set: haberman
+Method: munge
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 125.6
+Accuracy: 0.673202614379085
+Time to classify test set: 0
+
+
+
+================================
+Data set: haberman
+Method: munge
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 170.7
+Accuracy: 0.7222222222222222
+Time to classify test set: 32
+
+
+
+================================
+Data set: haberman
+Method: munge
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 225.9
+Accuracy: 0.6862745098039216
+Time to classify test set: 0
+
+
+
+================================
+Data set: haberman
+Method: munge
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 256.7
+Accuracy: 0.6764705882352942
+Time to classify test set: 0
+
+
+
+================================
+Data set: haberman
+Method: munge
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 269.2
+Accuracy: 0.696078431372549
+Time to classify test set: 32
+
+
+
+================================
+Data set: ionosphere
+Method: tree
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 14.9
+Accuracy: 0.6971428571428572
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: ensemble
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 1036.1
+Accuracy: 0.7314285714285714
+Time to classify test set: 202
+
+
+
+================================
+Data set: ionosphere
+Method: rnd_uniform
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 21.0
+Accuracy: 0.7742857142857142
+Time to classify test set: 16
+
+
+
+================================
+Data set: ionosphere
+Method: rnd_uniform
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 24.7
+Accuracy: 0.7457142857142857
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: rnd_uniform
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 31.5
+Accuracy: 0.7714285714285715
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: rnd_uniform
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 34.8
+Accuracy: 0.8114285714285714
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: rnd_uniform
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 38.1
+Accuracy: 0.8
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: rnd_uniform
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 64.4
+Accuracy: 0.7857142857142857
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: rnd_uniform
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 98.1
+Accuracy: 0.8171428571428572
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: rnd_uniform
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 130.2
+Accuracy: 0.8171428571428572
+Time to classify test set: 31
+
+
+
+================================
+Data set: ionosphere
+Method: rnd_uniform
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 161.9
+Accuracy: 0.7828571428571428
+Time to classify test set: 31
+
+
+
+================================
+Data set: ionosphere
+Method: mbs
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 22.9
+Accuracy: 0.8085714285714286
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: mbs
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 31.3
+Accuracy: 0.7685714285714286
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: mbs
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 43.1
+Accuracy: 0.8
+Time to classify test set: 15
+
+
+
+================================
+Data set: ionosphere
+Method: mbs
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 53.8
+Accuracy: 0.7914285714285715
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: mbs
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 58.6
+Accuracy: 0.78
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: mbs
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 102.0
+Accuracy: 0.8028571428571428
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: mbs
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 163.7
+Accuracy: 0.8028571428571428
+Time to classify test set: 16
+
+
+
+================================
+Data set: ionosphere
+Method: mbs
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 229.6
+Accuracy: 0.7971428571428572
+Time to classify test set: 15
+
+
+
+================================
+Data set: ionosphere
+Method: mbs
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 273.8
+Accuracy: 0.7542857142857143
+Time to classify test set: 31
+
+
+
+================================
+Data set: ionosphere
+Method: munge
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 27.7
+Accuracy: 0.7285714285714285
+Time to classify test set: 16
+
+
+
+================================
+Data set: ionosphere
+Method: munge
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 45.0
+Accuracy: 0.7371428571428571
+Time to classify test set: 16
+
+
+
+================================
+Data set: ionosphere
+Method: munge
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 66.9
+Accuracy: 0.7485714285714286
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: munge
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 82.6
+Accuracy: 0.7228571428571429
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: munge
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 101.2
+Accuracy: 0.7142857142857143
+Time to classify test set: 16
+
+
+
+================================
+Data set: ionosphere
+Method: munge
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 164.6
+Accuracy: 0.6857142857142857
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: munge
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 83.5
+Accuracy: 0.6857142857142857
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: munge
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 70.0
+Accuracy: 0.7
+Time to classify test set: 0
+
+
+
+================================
+Data set: ionosphere
+Method: munge
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 65.8
+Accuracy: 0.7085714285714285
+Time to classify test set: 0
+
+
+
+================================
+Data set: pima_indians
+Method: tree
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 86.1
+Accuracy: 0.6901041666666666
+Time to classify test set: 32
+
+
+
+================================
+Data set: pima_indians
+Method: ensemble
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 6064.6
+Accuracy: 0.7630208333333334
+Time to classify test set: 1044
+
+
+
+================================
+Data set: pima_indians
+Method: rnd_uniform
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 96.1
+Accuracy: 0.66015625
+Time to classify test set: 16
+
+
+
+================================
+Data set: pima_indians
+Method: rnd_uniform
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 108.5
+Accuracy: 0.7018229166666666
+Time to classify test set: 31
+
+
+
+================================
+Data set: pima_indians
+Method: rnd_uniform
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 120.2
+Accuracy: 0.73046875
+Time to classify test set: 0
+
+
+
+================================
+Data set: pima_indians
+Method: rnd_uniform
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 127.1
+Accuracy: 0.7291666666666666
+Time to classify test set: 0
+
+
+
+================================
+Data set: pima_indians
+Method: rnd_uniform
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 136.2
+Accuracy: 0.7161458333333334
+Time to classify test set: 0
+
+
+
+================================
+Data set: pima_indians
+Method: rnd_uniform
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 171.3
+Accuracy: 0.7395833333333334
+Time to classify test set: 15
+
+
+
+================================
+Data set: pima_indians
+Method: rnd_uniform
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 228.3
+Accuracy: 0.73828125
+Time to classify test set: 48
+
+
+
+================================
+Data set: pima_indians
+Method: rnd_uniform
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 273.5
+Accuracy: 0.7330729166666666
+Time to classify test set: 31
+
+
+
+================================
+Data set: pima_indians
+Method: rnd_uniform
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 313.8
+Accuracy: 0.7174479166666666
+Time to classify test set: 15
+
+
+
+================================
+Data set: pima_indians
+Method: mbs
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 95.9
+Accuracy: 0.7109375
+Time to classify test set: 0
+
+
+
+================================
+Data set: pima_indians
+Method: mbs
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 105.5
+Accuracy: 0.7135416666666666
+Time to classify test set: 0
+
+
+
+================================
+Data set: pima_indians
+Method: mbs
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 117.1
+Accuracy: 0.7434895833333334
+Time to classify test set: 0
+
+
+
+================================
+Data set: pima_indians
+Method: mbs
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 125.6
+Accuracy: 0.7330729166666666
+Time to classify test set: 31
+
+
+
+================================
+Data set: pima_indians
+Method: mbs
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 127.1
+Accuracy: 0.7174479166666666
+Time to classify test set: 16
+
+
+
+================================
+Data set: pima_indians
+Method: mbs
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 171.2
+Accuracy: 0.75390625
+Time to classify test set: 0
+
+
+
+================================
+Data set: pima_indians
+Method: mbs
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 233.0
+Accuracy: 0.7526041666666666
+Time to classify test set: 16
+
+
+
+================================
+Data set: pima_indians
+Method: mbs
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 294.5
+Accuracy: 0.7708333333333334
+Time to classify test set: 0
+
+
+
+================================
+Data set: pima_indians
+Method: mbs
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 344.4
+Accuracy: 0.7669270833333334
+Time to classify test set: 47
+
+
+
+================================
+Data set: pima_indians
+Method: munge
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 97.4
+Accuracy: 0.6692708333333334
+Time to classify test set: 0
+
+
+
+================================
+Data set: pima_indians
+Method: munge
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 103.8
+Accuracy: 0.6966145833333334
+Time to classify test set: 0
+
+
+
+================================
+Data set: pima_indians
+Method: munge
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 117.5
+Accuracy: 0.7317708333333334
+Time to classify test set: 15
+
+
+
+================================
+Data set: pima_indians
+Method: munge
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 131.3
+Accuracy: 0.7044270833333334
+Time to classify test set: 47
+
+
+
+================================
+Data set: pima_indians
+Method: munge
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 137.1
+Accuracy: 0.69921875
+Time to classify test set: 16
+
+
+
+================================
+Data set: pima_indians
+Method: munge
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 197.2
+Accuracy: 0.7109375
+Time to classify test set: 64
+
+
+
+================================
+Data set: pima_indians
+Method: munge
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 263.3
+Accuracy: 0.72265625
+Time to classify test set: 64
+
+
+
+================================
+Data set: pima_indians
+Method: munge
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 306.1
+Accuracy: 0.6953125
+Time to classify test set: 77
+
+
+
+================================
+Data set: pima_indians
+Method: munge
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 364.6
+Accuracy: 0.71484375
+Time to classify test set: 79
+
+
+
+
+
+================================
+Data set: pendigitis
+Method: tree
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 100.6
+Accuracy: 0.9436582109479306
+Time to classify test set: 280
+
+
+
+================================
+Data set: pendigitis
+Method: ensemble
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 9122.0
+Accuracy: 0.9606141522029372
+Time to classify test set: 42760
+
+
+
+================================
+Data set: pendigitis
+Method: rnd_uniform
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 117.1
+Accuracy: 0.9455273698264353
+Time to classify test set: 562
+
+
+
+================================
+Data set: pendigitis
+Method: rnd_uniform
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 126.6
+Accuracy: 0.9445927903871829
+Time to classify test set: 672
+
+
+
+================================
+Data set: pendigitis
+Method: rnd_uniform
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 131.7
+Accuracy: 0.9444592790387183
+Time to classify test set: 687
+
+
+
+================================
+Data set: pendigitis
+Method: rnd_uniform
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 139.4
+Accuracy: 0.9381842456608812
+Time to classify test set: 781
+
+
+
+================================
+Data set: pendigitis
+Method: rnd_uniform
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 145.7
+Accuracy: 0.9391188251001336
+Time to classify test set: 796
+
+
+
+================================
+Data set: pendigitis
+Method: rnd_uniform
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 187.5
+Accuracy: 0.9335113484646195
+Time to classify test set: 1152
+
+
+
+================================
+Data set: pendigitis
+Method: rnd_uniform
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 242.7
+Accuracy: 0.9339118825100133
+Time to classify test set: 1467
+
+
+
+================================
+Data set: pendigitis
+Method: rnd_uniform
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 308.1
+Accuracy: 0.9276368491321763
+Time to classify test set: 1699
+
+
+
+================================
+Data set: pendigitis
+Method: rnd_uniform
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 343.5
+Accuracy: 0.92630173564753
+Time to classify test set: 1716
+
+
+
+================================
+Data set: pendigitis
+Method: mbs
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 121.6
+Accuracy: 0.9423230974632844
+Time to classify test set: 716
+
+
+
+================================
+Data set: pendigitis
+Method: mbs
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 135.0
+Accuracy: 0.9408544726301735
+Time to classify test set: 749
+
+
+
+================================
+Data set: pendigitis
+Method: mbs
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 150.1
+Accuracy: 0.9376502002670227
+Time to classify test set: 889
+
+
+
+================================
+Data set: pendigitis
+Method: mbs
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 166.4
+Accuracy: 0.9411214953271028
+Time to classify test set: 939
+
+
+
+================================
+Data set: pendigitis
+Method: mbs
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 171.7
+Accuracy: 0.9384512683578105
+Time to classify test set: 1076
+
+
+
+================================
+Data set: pendigitis
+Method: mbs
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 216.1
+Accuracy: 0.9351134846461949
+Time to classify test set: 1264
+
+
+
+================================
+Data set: pendigitis
+Method: mbs
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 273.6
+Accuracy: 0.9299065420560748
+Time to classify test set: 1484
+
+
+
+================================
+Data set: pendigitis
+Method: mbs
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 307.3
+Accuracy: 0.9268357810413885
+Time to classify test set: 1170
+
+
+
+================================
+Data set: pendigitis
+Method: mbs
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 335.3
+Accuracy: 0.9359145527369827
+Time to classify test set: 1230
+
+
+
+================================
+Data set: pendigitis
+Method: munge
+Size: 100
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 113.2
+Accuracy: 0.9436582109479306
+Time to classify test set: 594
+
+
+
+================================
+Data set: pendigitis
+Method: munge
+Size: 250
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 127.2
+Accuracy: 0.9401869158878504
+Time to classify test set: 655
+
+
+
+================================
+Data set: pendigitis
+Method: munge
+Size: 500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 143.8
+Accuracy: 0.9352469959946595
+Time to classify test set: 718
+
+
+
+================================
+Data set: pendigitis
+Method: munge
+Size: 750
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 162.7
+Accuracy: 0.9122830440587449
+Time to classify test set: 857
+
+
+
+================================
+Data set: pendigitis
+Method: munge
+Size: 1000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 174.7
+Accuracy: 0.9229639519359145
+Time to classify test set: 903
+
+
+
+================================
+Data set: pendigitis
+Method: munge
+Size: 2500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 268.8
+Accuracy: 0.9170894526034713
+Time to classify test set: 1420
+
+
+
+================================
+Data set: pendigitis
+Method: munge
+Size: 5000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 357.8
+Accuracy: 0.9098798397863819
+Time to classify test set: 1949
+
+
+
+================================
+Data set: pendigitis
+Method: munge
+Size: 7500
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 454.8
+Accuracy: 0.9197596795727637
+Time to classify test set: 2527
+
+
+
+================================
+Data set: pendigitis
+Method: munge
+Size: 10000
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 551.6
+Accuracy: 0.9144192256341789
+Time to classify test set: 3043
+
+
+
+================================
+Data set: sonar
+Method: tree
+Size: 1
+--------------------------------
+Average results over all folds :
+--------------------------------
+Number of rules: 14.2
+Accuracy: 0.7259615384615384
+Time to classify test set: 0

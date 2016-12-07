@@ -10,19 +10,7 @@
 
 :- module(plms,[run_experiment/3, start/0]).
 %tree, util, model_based_sampling, rnd_uniform, munge, indexing]).
-:- use_module([library(csv), library(lists), library(random), library(codesio),
-	       %write_results, tree, rule_set, util, model_based_sampling, rnd_uniform, munge, indexing]).
-
-	       'C:/repository/prolog_machine_learning_system_PMLS/trunk/write_results.pl',
-	       'C:/repository/prolog_machine_learning_system_PMLS/trunk/tree.pl',
-	       'C:/repository/prolog_machine_learning_system_PMLS/trunk/rule_set.pl',
-	       'C:/repository/prolog_machine_learning_system_PMLS/trunk/util.pl',
-	       'C:/repository/prolog_machine_learning_system_PMLS/trunk/model_based_sampling.pl',
-               'C:/repository/prolog_machine_learning_system_PMLS/trunk/rnd_uniform.pl',
-               'C:/repository/prolog_machine_learning_system_PMLS/trunk/munge.pl',
-               'C:/repository/prolog_machine_learning_system_PMLS/trunk/indexing.pl'
-	      ]).
-
+:- use_module([library(csv), library(lists), library(random), library(codesio), write_results, tree, rule_set, util, model_based_sampling, rnd_uniform, munge, indexing]).
 
 %%increase memory
 :- set_prolog_stack(global, limit(9 000 000 000 000 000 000)).
@@ -43,32 +31,27 @@
 %TODO: Create documentation on all possible input parameters!
 % fix csv input for classification...add weights to attibutes!
 
-setup:-
-    %current_directory(_,'C:/Users/tony/Box Sync/jobb/dsv/programmering/Indexing/data').     %SICStus prolog
-    working_directory(L,L),
-    working_directory(L,'C:/repository/prolog_machine_learning_system_PMLS/trunk/').   %Home ismis comp
-    %working_directory(L,'C:/Users/sssldy/Box Sync/jobb/dsv/programmering/Indexing/data').   %SCANIA
 
-experiment([validation_size(0.0), fold_x_v(10)]).
+% fold_x_v = number of folds, power of 2 is useful for multi-core systems
+experiment([validation_size(0.0), fold_x_v(16)]).
 
-method([%single_model([error_est(sq_err)], linear_regression)]). %,
-        %single_model([classification, list_classification, transform(no), rnd_feature(no), min_cov(5), min_margin(0.90)], sac) %,
-        ensemble_model(100, [classification, bagging, list_classification, rnd_feature(no), min_cov(0), min_margin(0.90)], dac)      
-	%generate_ex([mbs(30), rnd_uniform(30), rnd_uniform(50), munge(30, 0.25, 4)]),
-	%bit_size([4, 8, 16, 32, 64, 128, 256, 512, 1024])
-	%index([bit_size([4,8,16,32,64,128,256])]),
-       
-       ]).
 
+% Methods
+method([ensemble_model(100, [classification, bagging, list_classification, rnd_feature(no), min_cov(0), min_margin(0.90)], dac)]).
+%method([ensemble_model(100, [classification, bagging, list_classification, rnd_feature(no), min_cov(0), min_margin(0.90)], dac)]).  
+%method([ensemble_model(100, [classification, bagging, list_classification, rnd_feature(no), min_cov(0), min_margin(0.90)], sac)]).
+%method([single_model([classification, list_classification, transform(no), rnd_feature(no), min_cov(5), min_margin(0.90)], sac)]).
+%method([single_model([classification, list_classification, transform(no), rnd_feature(no), min_cov(5), min_margin(0.90)], sac)]).
 
 
 %new file meta information and new data input, csv
 %also altered old prolog format...
 
 %all csv create a tuple of Name(Xinput, Yval/Class)
+% Uncomment the data sets to use, and remove the trailing comma after the last one
 data([%set(ex, prolog, [background_head(ex/31),   background_file('ismis_data/ismis_cx_no_id'), example_file('ismis_data/pre_process_training_data_no_id')])
       %set(ex, prolog, [background_head(ex/32),   background_file('ismis_data/ismis_cx_id'), example_file('ismis_data/pre_process_training_data_id')])
-       %set(hubble, csv, [filename('regression_data/hubble.csv'), convert(true), functor(hubble), y_cols([3]), x_cols([4])])
+       %set(hubble,                  csv,    [filename('regression_data/hubble.csv'), convert(true), functor(hubble), y_cols([3]), x_cols([4])])
        %set(breast_cancer_wisconsin, prolog, [background_head(relation/10),   background_file('classification_data/breast_cancer_wisconsin_cx'), example_file('classification_data/breast_cancer_wisconsin_ex_mod')]),
        %set(bupa,                    prolog, [background_head(bupa/7),        background_file('classification_data/bupa'),                       example_file('classification_data/bupa_ex')]),
        %set(cleveland_heart_disease, prolog, [background_head(relation/14),   background_file('classification_data/cleveland_heart_disease_cx'), example_file('classification_data/cleveland_heart_disease_ex_mod')]),   
@@ -78,7 +61,7 @@ data([%set(ex, prolog, [background_head(ex/31),   background_file('ismis_data/is
        %set(thyroid,                 prolog, [background_head(thyroid/6),     background_file('classification_data/new_thyroid'),                example_file('classification_data/new_thyroid_ex')]),
        %set(wine,                    prolog, [background_head(relation/14),   background_file('classification_data/wine_cx'),                    example_file('classification_data/wine_ex')]),
        %set(image_segmentation,      prolog, [background_head(relation/20),   background_file('classification_data/image_segmentation_cx'),      example_file('classification_data/image_segmentation_ex')]),
-       %set(ionosphere,              prolog, [background_head(good_radar/35), background_file('classification_data/ionosphere'),                 example_file('classification_data/ionosphere_ex')]),
+       %set(ionosphere,              prolog, [background_head(good_radar/35), background_file('classification_data/ionosphere'),                 example_file('classification_data/ionosphere_ex')])
        %set(pendigitis,              prolog, [background_head(rel/17),        background_file('classification_data/pendigits_names'),            example_file('classification_data/pendigits_ex')]),
        %set(pima_indians,            prolog, [background_head(diabetes/9),    background_file('classification_data/pima_indians'),               example_file('classification_data/pima_indians_ex')]),
        %set(sonar,                   prolog, [background_head(mine/63),       background_file('classification_data/sonar'),                      example_file('classification_data/sonar_ex')]),
@@ -130,7 +113,8 @@ interpret_info(InfoList, Head, BackgroundKnowledge, Examples):-
 use_methods([], _, _, _, _, _, _).
 use_methods([Method|Methods], Folds, Name, Head, Parameters, ExLists, BKList):-
     do_experiment(Folds, Name, Head, Method, ExLists, BKList, Results),
-    open('Result_new', append, Stream),
+    writeln('Writing results'),
+    open('results.txt', append, Stream),
     write_results(Results, Stream, Folds),
     close(Stream),
     retract_loop(Results, Head, BKList),!,
@@ -154,6 +138,7 @@ retract_inner_loop(_, _, _). %Fail silently
 
 do_experiment(0, _, _, _, _, _, []).
 do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval):-
+    write('Working with fold: '),writeln(Folds),
     do_one_fold(Folds, Name, Head, Parameters, ExLists, BKList, PartEval),
     NewFolds is Folds - 1,!,
     do_experiment(NewFolds, Name, Head, Parameters, ExLists, BKList, RestEval),
@@ -215,7 +200,7 @@ post_process_rules(DataName, _Head, TestFold, Method, TestExList, TrainExList, _
      classify_rules(DataName, Method, TestExWIdList, ClassIndex, CClassTuples, Keys, NoRules, NoConds, Rules, PartResult),
      append(PartResult, IndexRes, Result).
 post_process_rules(DataName, _Head, _TestFold, Method,  TestExList, _TrainExList, _BKList, ClassIndex, Keys, NoRules, NoConds, ClassT, Rules, Result):-    
-     write('No post-processing'),nl,%trace,
+     %write('No post-processing'),nl,%trace,
      copy_term(ClassT, CClassTuples),	
      classify_rules(DataName, Method, TestExList, ClassIndex, CClassTuples,  Keys, NoRules, NoConds, Rules, Result).     	
 
@@ -1307,26 +1292,3 @@ get_atomC([Code|RestOfCodes], [], RestOfCodes):-
   char_code(',', Code).
 get_atomC([Code|Codes], [Code|AtomCodes], RestOfCodes):-
   get_atomC(Codes, AtomCodes, RestOfCodes).
-
-
-
-:- setup.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

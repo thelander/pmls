@@ -15,7 +15,7 @@ tree(TrainExList, BKList, Parameters, Head, BBKey, ClassIndex, ClassT, Tree, CHe
     count_classes(TrainExList, BBKey, FeatureDTList, ClassIndex, ClassTupleC, ClassList),!,
     Tree = dac_node(Head, FeatureDTList, ClassList, _Children),
     build_tree(TrainExList, BBKey, Parameters, ClassIndex, ClassTupleC, Tree),
-    write('finished building tree...cleaning up..'),nl,
+    %write('finished building tree...cleaning up..'),nl,
     create_class_tuples(BBKey, ClassT),
     retract_bb([Head], BBKey),
     keysort(ClassList, SortedTuples),

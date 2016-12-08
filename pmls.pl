@@ -38,7 +38,6 @@ experiment([validation_size(0.0), fold_x_v(10)]).
 
 % Methods
 method([ensemble_model(100, [classification, bagging, list_classification, rnd_feature(no), min_cov(0), min_margin(0.90)], dac)]).
-%method([ensemble_model(100, [classification, bagging, list_classification, rnd_feature(no), min_cov(0), min_margin(0.90)], dac)]).  
 %method([ensemble_model(100, [classification, bagging, list_classification, rnd_feature(no), min_cov(0), min_margin(0.90)], sac)]).
 %method([single_model([classification, list_classification, transform(no), rnd_feature(no), min_cov(5), min_margin(0.90)], sac)]).
 %method([single_model([classification, list_classification, transform(no), rnd_feature(no), min_cov(5), min_margin(0.90)], sac)]).

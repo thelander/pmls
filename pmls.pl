@@ -32,8 +32,8 @@
 % fix csv input for classification...add weights to attibutes!
 
 
-% fold_x_v = number of folds, power of 2 is useful for multi-core systems
-experiment([validation_size(0.0), fold_x_v(16)]).
+% fold_x_v = number of folds
+experiment([validation_size(0.0), fold_x_v(10)]).
 
 
 % Methods

@@ -141,42 +141,35 @@ retract_inner_loop(_, _, _). %Fail silently
 
 do_experiment(0, _, _, _, _, _, []).
 do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval):-
-    write('Working with fold: '),writeln(Folds),
-    do_one_fold(Folds, Name, Head, Parameters, ExLists, BKList, PartEval),
+    thread_create_in_pool(thread_pool, do_one_fold(Folds, Name, Head, Parameters, ExLists, BKList), ThreadID, []),
+    write('Working with fold: '),write(Folds),write(' (thread: '),write(ThreadID),writeln(')'),
     NewFolds is Folds - 1,!,
     do_experiment(NewFolds, Name, Head, Parameters, ExLists, BKList, RestEval),
-    append(PartEval, RestEval, Eval).
+    thread_get_message(CurrentEval),
+    append(CurrentEval, RestEval, Eval).
+
 do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval):-
     write(Folds), write(Name), write(Head), write(Parameters), %write(ExLists), write(BKList), write(Eval),
     do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval).
 
-
-%CSV fix later
-%do_one_fold(TestFold, Name, Head, Method, ExLists, no_bk, Result):-
-%    TestFold \== 0,
-%    nth1(TestFold, ExLists, TestExList, TrainExList), 
-%    do_regression(Method, TrainExList, Model).
-    %Write these later
-    %clean_conditions(Rules, CleanCondRulesL),
-    %add_rule_id(CleanCondRulesL, RulesWId, NoConds, NoRules),
-    %post_process_regression(Name, Head, TestFold, Method, TestExList, TrainExList, BKList, ClassIndex, Keys, NoRules, NoConds, ClassT, RulesWId, Result).
-
-do_one_fold(TestFold, Name, Head, Method, ExLists, BKList, Result):-
+do_one_fold(TestFold, Name, Head, Method, ExLists, BKList):-
     TestFold \== 0,
     nth1(TestFold, ExLists, TestExList, TrainExList),
     %trace,
     do_induction(Method, Head, TrainExList, BKList, TestFold, ClassIndex, Keys, _RawInduction, NoRules1, ClassT, Rules),!,
     clean_conditions(Rules, CleanCondRulesL),
     add_rule_id(CleanCondRulesL, RulesWId, NoConds, NoRules1, NoRules),
-    post_process_rules(Name, Head, TestFold, Method, TestExList, TrainExList, BKList, ClassIndex, Keys, NoRules, NoConds, ClassT, RulesWId, Result).
+    post_process_rules(Name, Head, TestFold, Method, TestExList, TrainExList, BKList, ClassIndex, Keys, NoRules, NoConds, ClassT, RulesWId, Result),
+    thread_send_message(main, Result).
 
-do_one_fold(TestFold, Name, Head, Method, ExLists, no_bk, Result):-
+do_one_fold(TestFold, Name, Head, Method, ExLists, no_bk):-
     TestFold \== 0,
     nth1(TestFold, ExLists, TestExList, TrainExList), 
     do_regression(Method, Head, TrainExList, BKList, TestFold, ClassIndex, Keys, _RawInduction, _NoRules, ClassT, Rules),
     clean_conditions(Rules, CleanCondRulesL),
     add_rule_id(CleanCondRulesL, RulesWId, NoConds, _, NoRules),
-    post_process_rules(Name, Head, TestFold, Method, TestExList, TrainExList, BKList, ClassIndex, Keys, NoRules, NoConds, ClassT, RulesWId, Result).
+    post_process_rules(Name, Head, TestFold, Method, TestExList, TrainExList, BKList, ClassIndex, Keys, NoRules, NoConds, ClassT, RulesWId, Result),
+    thread_send_message(main, Result).
 
 post_process_rules(DataName, Head, TestFold, Method, TestExList, TrainExList, BKList, ClassIndex, Keys, NoRules, NoConds, ClassT, Rules, Result):-
      get_parameters(Method, Parameters),

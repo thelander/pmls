@@ -68,10 +68,6 @@ data([%set(ex, prolog, [background_head(ex/31),   background_file('ismis_data/is
     ]).
 
 start:-
-    current_prolog_flag(cpu_count, CPUCount),
-    thread_pool_create(thread_pool, CPUCount, []),
-    message_queue_create(message_queue),
-    write('Using multithreading with '),write(CPUCount),writeln(' threads'),
     experiment(E),
     method(M),
     data(D),

@@ -137,18 +137,25 @@ retract_inner_loop(_, _, _). %Fail silently
 
 do_experiment(0, _, _, _, _, _, []).
 do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval):-
-    % thread_create_in_pool(thread_pool, do_one_fold(Folds, Name, Head, Parameters, ExLists, BKList), ThreadID, []),
-	do_one_fold(Folds, Name, Head, Parameters, ExLists, BKList, PartEval),
-    write('Working with fold: '),write(Folds),write(' (thread: '),write(ThreadID),writeln(')'),
+    write('Working with fold: '),writeln(Folds),
+    do_one_fold(Folds, Name, Head, Parameters, ExLists, BKList, PartEval),
     NewFolds is Folds - 1,!,
     do_experiment(NewFolds, Name, Head, Parameters, ExLists, BKList, RestEval),
-    % thread_get_message(CurrentEval),
-    % append(CurrentEval, RestEval, Eval).
-	append(PartEval, RestEval, Eval).
-
+    append(PartEval, RestEval, Eval).
 do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval):-
     write(Folds), write(Name), write(Head), write(Parameters), %write(ExLists), write(BKList), write(Eval),
     do_experiment(Folds, Name, Head, Parameters, ExLists, BKList, Eval).
+
+
+%CSV fix later
+%do_one_fold(TestFold, Name, Head, Method, ExLists, no_bk, Result):-
+%    TestFold \== 0,
+%    nth1(TestFold, ExLists, TestExList, TrainExList), 
+%    do_regression(Method, TrainExList, Model).
+    %Write these later
+    %clean_conditions(Rules, CleanCondRulesL),
+    %add_rule_id(CleanCondRulesL, RulesWId, NoConds, NoRules),
+    %post_process_regression(Name, Head, TestFold, Method, TestExList, TrainExList, BKList, ClassIndex, Keys, NoRules, NoConds, ClassT, RulesWId, Result).
 
 do_one_fold(TestFold, Name, Head, Method, ExLists, BKList, Result):-
     TestFold \== 0,
@@ -158,7 +165,6 @@ do_one_fold(TestFold, Name, Head, Method, ExLists, BKList, Result):-
     clean_conditions(Rules, CleanCondRulesL),
     add_rule_id(CleanCondRulesL, RulesWId, NoConds, NoRules1, NoRules),
     post_process_rules(Name, Head, TestFold, Method, TestExList, TrainExList, BKList, ClassIndex, Keys, NoRules, NoConds, ClassT, RulesWId, Result).
-    % thread_send_message(main, Result).
 
 do_one_fold(TestFold, Name, Head, Method, ExLists, no_bk, Result):-
     TestFold \== 0,
@@ -852,9 +858,7 @@ do_trees(Size, Parameters, Head, TrainExList, BKList, BBKey, ClassIndex, _ClassT
     ),
     write_to_codes(Size-BBKey, TreeCodes),
     atom_codes(TreeKey,TreeCodes),
-	write('Working with Tree nr: '),write(Size),write(' (thread: '),write(ThreadID),writeln(')'),
-	thread_create_in_pool(thread_pool, tree(NewTrainExList, BKList, Parameters, Head, TreeKey, ClassIndex, NewClassT, Tree, _DefaultFact),ThreadID, []),
-    % tree(NewTrainExList, BKList, Parameters, Head, TreeKey, ClassIndex, NewClassT, Tree, _DefaultFact),
+    tree(NewTrainExList, BKList, Parameters, Head, TreeKey, ClassIndex, NewClassT, Tree, _DefaultFact),
     NewSize is Size - 1,!,    
     (member(list_classification, Parameters) ->
       tree_to_rules(Tree, NoTrees, Rules),
